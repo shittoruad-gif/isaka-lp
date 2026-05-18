@@ -122,6 +122,8 @@ ul{margin:0;padding:0;list-style:none}
 .hero-visual-frame{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;overflow:hidden;background:linear-gradient(180deg,#e9dcc6,#d9c4a3);box-shadow:var(--shadow);position:relative}
 .hero-visual-frame::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,253,248,.4),transparent 50%)}
 .hero-visual-frame img,.hero-visual-frame svg{width:100%;height:100%;object-fit:cover;display:block}
+.hero-logo-frame{background:linear-gradient(160deg,#fffdf8 0%,#f7f3ec 55%,#efe6d6 100%);display:flex;align-items:center;justify-content:center}
+.hero-logo-frame .hero-logo{width:78%;height:auto;max-height:78%;object-fit:contain}
 .hero-deco{position:absolute;width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,#fffdf8,#f3ebde);box-shadow:var(--shadow-soft);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.4}
 .hero-deco-1{bottom:-20px;left:-30px;animation:float 5s ease-in-out infinite}
 .hero-deco-2{top:20px;right:-20px;width:110px;height:110px;animation:float 6s ease-in-out infinite reverse}
@@ -338,7 +340,7 @@ ul{margin:0;padding:0;list-style:none}
 <header class="header" id="header">
   <div class="header-inner">
     <a href="#top" class="logo" style="flex-direction:row;align-items:center;gap:12px">
-      <img src="assets/logo-mark.png" alt="いさか鍼灸・美容整体院 ロゴ" width="48" height="48" style="flex-shrink:0;border-radius:50%;display:block">
+      <img src="assets/logo-mark-trans.png" alt="いさか鍼灸・美容整体院 ロゴ" width="48" height="48" style="flex-shrink:0;display:block">
       <span style="display:flex;flex-direction:column;line-height:1.1">
         <span class="logo-jp">いさか鍼灸・美容整体院</span>
         <span class="logo-en">ISAKA Acupuncture &amp; Beauty</span>
@@ -372,6 +374,7 @@ ul{margin:0;padding:0;list-style:none}
       </p>
       <div class="hero-meta">
         <span class="tag" style="background:linear-gradient(135deg,#c98664,#b8985a);color:#fffdf8;border-color:transparent">2026.7.1 GRAND OPEN</span>
+        <span class="tag">施術歴 22年</span>
         <span class="tag">自律神経 × 美容整体</span>
         <span class="tag">完全予約制 / 1対1</span>
         <span class="tag">πテラピー × 美容鍼 × 自律神経整体</span>
@@ -382,84 +385,8 @@ ul{margin:0;padding:0;list-style:none}
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-visual-frame">
-        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="hbg" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#f3ebde"/>
-              <stop offset="55%" stop-color="#e9dcc6"/>
-              <stop offset="100%" stop-color="#d9c4a3"/>
-            </linearGradient>
-            <radialGradient id="hlight" cx="35%" cy="22%" r="60%">
-              <stop offset="0%" stop-color="#fffdf8" stop-opacity=".75"/>
-              <stop offset="100%" stop-color="#fffdf8" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="hskin" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#f0d8be"/>
-              <stop offset="100%" stop-color="#d6b692"/>
-            </linearGradient>
-            <linearGradient id="hhair" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#3d2e22"/>
-              <stop offset="100%" stop-color="#5d4a37"/>
-            </linearGradient>
-          </defs>
-          <rect width="400" height="500" fill="url(#hbg)"/>
-          <rect width="400" height="500" fill="url(#hlight)"/>
-          <!-- 流線パターン -->
-          <g stroke="#b8985a" stroke-width=".5" fill="none" opacity=".28">
-            <path d="M-10 80 Q 100 50 200 90 T 410 80"/>
-            <path d="M-10 120 Q 100 90 200 130 T 410 120"/>
-            <path d="M-10 430 Q 100 400 200 440 T 410 430"/>
-            <path d="M-10 470 Q 100 440 200 480 T 410 470"/>
-          </g>
-          <!-- 桜の小花アクセント -->
-          <g fill="#b8985a" opacity=".25">
-            <circle cx="50" cy="60" r="3"/><circle cx="60" cy="55" r="2"/>
-            <circle cx="350" cy="450" r="3"/><circle cx="340" cy="445" r="2"/>
-          </g>
-          <!-- 横たわる横顔（仰向け、上を向いた顔） -->
-          <!-- 髪 -->
-          <path d="M 80 280 Q 70 220 110 195 Q 165 180 220 188 Q 270 195 285 210 Q 280 235 260 245 Q 235 250 200 250 Q 160 252 130 268 Q 105 285 90 305 Z" fill="url(#hhair)"/>
-          <!-- 顔 (横向き、上を向いている) -->
-          <path d="M 130 268 Q 105 285 90 320 Q 88 340 105 348 Q 130 352 145 348 Q 162 345 168 330 Q 178 308 175 290 Q 175 273 160 268 Q 144 264 130 268 Z" fill="url(#hskin)"/>
-          <!-- 鼻のライン -->
-          <path d="M 92 318 Q 80 320 80 326 Q 80 332 90 332" fill="none" stroke="#a88864" stroke-width="1.2" stroke-linecap="round"/>
-          <!-- 閉じた目 -->
-          <path d="M 112 308 Q 122 305 132 308" fill="none" stroke="#5d4a37" stroke-width="1.4" stroke-linecap="round"/>
-          <!-- まつげ -->
-          <path d="M 113 306 L 112 302 M 118 305 L 117 301 M 124 305 L 124 301 M 130 306 L 131 302" fill="none" stroke="#3d2e22" stroke-width=".8" stroke-linecap="round"/>
-          <!-- 口 -->
-          <path d="M 105 340 Q 115 343 128 340" fill="none" stroke="#a06850" stroke-width="1.3" stroke-linecap="round"/>
-          <!-- 耳 -->
-          <path d="M 168 308 Q 178 312 175 322 Q 172 328 168 326" fill="url(#hskin)" stroke="#a88864" stroke-width=".8"/>
-          <!-- 首〜肩 -->
-          <path d="M 145 348 Q 150 380 185 395 Q 230 410 290 410 L 400 410 L 400 500 L 0 500 L 0 380 Q 40 360 90 350 Z" fill="#c9a778"/>
-          <!-- 施術者の手（指先） -->
-          <g fill="url(#hskin)" stroke="#a88864" stroke-width=".8" opacity=".95">
-            <path d="M 210 250 Q 220 248 232 252 Q 240 256 240 264 Q 240 272 232 274 L 215 274 Q 208 270 207 262 Q 207 254 210 250 Z"/>
-            <!-- 指 -->
-            <path d="M 175 268 Q 178 250 188 248 Q 198 248 199 260 Q 198 270 192 272 Z"/>
-            <path d="M 192 256 Q 195 240 205 240 Q 215 240 215 252 Q 214 264 208 266 Z"/>
-            <path d="M 210 252 Q 215 238 226 240 Q 235 244 233 254 Q 230 263 224 264 Z"/>
-          </g>
-          <!-- 装飾の光の粒 -->
-          <g fill="#fffdf8">
-            <circle cx="320" cy="100" r="2.5" opacity=".7"/>
-            <circle cx="350" cy="160" r="1.8" opacity=".5"/>
-            <circle cx="295" cy="60" r="2" opacity=".6"/>
-            <circle cx="45" cy="380" r="2.2" opacity=".5"/>
-          </g>
-          <!-- 細い装飾線 -->
-          <line x1="0" y1="498" x2="400" y2="498" stroke="#b8985a" stroke-width=".5" opacity=".4"/>
-        </svg>
-      </div>
-      <div class="hero-deco hero-deco-1" style="background:linear-gradient(135deg,#c98664,#b8985a);color:#fffdf8">
-        <div class="num" style="color:#fffdf8;font-size:22px;letter-spacing:.08em">NEW</div>
-        <div class="label" style="color:#fffdf8;font-family:var(--latin);font-style:italic;letter-spacing:.2em;font-size:13px;margin-top:2px">OPEN</div>
-      </div>
-      <div class="hero-deco hero-deco-2">
-        <div class="num">22<span style="font-size:14px">年</span></div>
-        <div class="label">施術歴</div>
+      <div class="hero-visual-frame hero-logo-frame">
+        <img class="hero-logo" src="assets/logo-full-trans.png" alt="いさか鍼灸・美容整体院 ロゴ">
       </div>
     </div>
   </div>
