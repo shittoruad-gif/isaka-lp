@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>【New Open】いさか鍼灸・美容整体院｜自律神経の乱れを原因からアプローチする美容整体・鍼灸サロン</title>
+<meta name="description" content="【New Open】いさか鍼灸・美容整体院は、サーモグラフィー(SAMMO)・フィケラピー・美容鍼で、脳からの神経伝達エラーに着目し自律神経の乱れを根本からアプローチする完全予約制サロン。40〜60代女性に選ばれる美容整体・フェイシャルケア。">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="【New Open】いさか鍼灸・美容整体院">
+<meta property="og:description" content="自律神経の乱れを原因からアプローチする、新しい美容整体・鍼灸サロン。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+<style>
+/* ========== Reset & Base ========== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;color:#3d342c;background:#faf6f0;line-height:1.85;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+h1,h2,h3,h4,p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+
+/* ========== Variables ========== */
+:root{
+  --beige-50:#faf6f0;
+  --beige-100:#f3ebde;
+  --beige-200:#e9dcc6;
+  --beige-300:#d9c4a3;
+  --wood:#b89878;
+  --wood-dark:#8a6e52;
+  --brown:#5d4a37;
+  --brown-deep:#3d342c;
+  --gold:#b8985a;
+  --accent:#c98664;
+  --ivory:#fffdf8;
+  --shadow:0 8px 30px rgba(120,90,60,.08);
+  --shadow-soft:0 4px 20px rgba(120,90,60,.05);
+  --serif:"Noto Serif JP",serif;
+  --latin:"Cormorant Garamond",serif;
+}
+
+/* ========== Utilities ========== */
+.serif{font-family:var(--serif);font-weight:500}
+.latin{font-family:var(--latin);letter-spacing:.12em}
+.wrap{width:min(1080px,92%);margin-inline:auto}
+.narrow{width:min(820px,92%);margin-inline:auto}
+.section{padding:clamp(60px,9vw,110px) 0;position:relative}
+.eyebrow{display:inline-block;font-family:var(--latin);font-style:italic;color:var(--wood-dark);letter-spacing:.25em;font-size:14px;margin-bottom:14px}
+.h-title{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3.4vw,34px);line-height:1.55;color:var(--brown-deep);text-align:center;margin-bottom:14px}
+.h-sub{text-align:center;color:#7a6b58;font-size:14px;letter-spacing:.18em;margin-bottom:50px}
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:24px 0 14px;color:var(--wood)}
+.divider::before,.divider::after{content:"";flex:0 0 40px;height:1px;background:currentColor;opacity:.5}
+.divider span{font-family:var(--latin);letter-spacing:.3em;font-size:12px}
+
+/* ========== Header ========== */
+.header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(250,246,240,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:.3s;border-bottom:1px solid rgba(184,152,90,.08)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:74px;width:min(1200px,94%);margin-inline:auto}
+.logo{display:flex;flex-direction:column;line-height:1.1}
+.logo-jp{font-family:var(--serif);font-weight:500;font-size:18px;color:var(--brown-deep);letter-spacing:.08em}
+.logo-en{font-family:var(--latin);font-style:italic;font-size:11px;color:var(--wood-dark);letter-spacing:.2em;margin-top:3px}
+.nav{display:flex;gap:30px;align-items:center}
+.nav a{font-size:13px;color:var(--brown);letter-spacing:.14em;position:relative;padding:6px 2px;transition:.2s}
+.nav a:hover{color:var(--gold)}
+.nav a::after{content:"";position:absolute;left:50%;bottom:0;width:0;height:1px;background:var(--gold);transition:.3s;transform:translateX(-50%)}
+.nav a:hover::after{width:100%}
+.nav-cta{background:var(--wood-dark);color:#fff !important;padding:10px 22px !important;border-radius:999px;font-size:12px !important;letter-spacing:.18em}
+.nav-cta:hover{background:var(--brown);color:#fff !important}
+.nav-cta::after{display:none !important}
+.menu-btn{display:none;width:38px;height:38px;flex-direction:column;justify-content:center;gap:5px}
+.menu-btn span{display:block;height:1px;background:var(--brown);transition:.3s}
+.menu-btn.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-btn.is-open span:nth-child(2){opacity:0}
+.menu-btn.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+@media(max-width:880px){
+  .menu-btn{display:flex}
+  .nav{position:fixed;inset:74px 0 auto 0;background:rgba(250,246,240,.98);backdrop-filter:blur(20px);flex-direction:column;gap:0;padding:20px 0 40px;transform:translateY(-120%);transition:.4s cubic-bezier(.4,0,.2,1);border-bottom:1px solid rgba(184,152,90,.1)}
+  .nav.is-open{transform:translateY(0)}
+  .nav a{padding:18px 0;width:80%;text-align:center;border-bottom:1px solid rgba(184,152,90,.1);font-size:14px}
+  .nav a::after{display:none}
+  .nav-cta{margin-top:14px;width:auto !important;padding:14px 32px !important}
+}
+
+/* ========== NewOpen badge ========== */
+.newopen-band{position:fixed;top:74px;left:0;right:0;background:linear-gradient(90deg,#b8985a,#c98664,#b8985a);color:#fff;text-align:center;padding:8px 14px;font-size:12px;letter-spacing:.28em;font-family:var(--latin);font-style:italic;font-weight:500;z-index:49;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.newopen-band b{font-family:var(--serif);font-style:normal;letter-spacing:.18em;margin-left:10px;font-weight:500}
+@media(max-width:680px){.newopen-band{font-size:10.5px;letter-spacing:.18em;padding:7px 10px}}
+.hero{padding-top:160px !important}
+@media(max-width:880px){.hero{padding-top:140px !important}}
+
+/* ========== Hero ========== */
+.hero{position:relative;min-height:100svh;padding:120px 0 60px;display:flex;align-items:center;overflow:hidden;background:
+  radial-gradient(60% 60% at 20% 20%,rgba(233,220,198,.6),transparent 70%),
+  radial-gradient(70% 70% at 90% 80%,rgba(217,196,163,.4),transparent 70%),
+  linear-gradient(180deg,#faf6f0 0%,#f3ebde 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:
+  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><defs><pattern id='p' width='240' height='80' patternUnits='userSpaceOnUse'><path d='M0 40 Q60 10 120 40 T240 40' fill='none' stroke='%23b89878' stroke-width='.5' opacity='.18'/></pattern></defs><rect width='100%' height='100%' fill='url(%23p)'/></svg>");
+  opacity:.5;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;width:min(1200px,94%);margin-inline:auto;position:relative;z-index:2}
+.hero-copy .eyebrow{margin-bottom:24px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4.6vw,50px);line-height:1.45;color:var(--brown-deep);margin-bottom:28px;letter-spacing:.03em}
+.hero h1 .accent{color:var(--wood-dark);position:relative;display:inline-block}
+.hero h1 .accent::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:6px;background:rgba(184,152,90,.18);border-radius:4px;z-index:-1}
+.hero-lead{font-size:15px;line-height:2;color:#5d5042;margin-bottom:36px;max-width:520px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px}
+.tag{font-size:12px;letter-spacing:.16em;padding:8px 18px;border:1px solid rgba(184,152,90,.4);border-radius:999px;color:var(--wood-dark);background:rgba(255,253,248,.6)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:18px 32px;border-radius:999px;font-size:14px;letter-spacing:.14em;font-weight:500;transition:.3s;position:relative;overflow:hidden}
+.btn-primary{background:linear-gradient(135deg,#a07a52 0%,#8a6e52 100%);color:#fff;box-shadow:0 12px 30px rgba(138,110,82,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(138,110,82,.4)}
+.btn-primary::after{content:"→";font-size:18px;transition:.3s}
+.btn-primary:hover::after{transform:translateX(4px)}
+.btn-ghost{color:var(--brown);border:1px solid rgba(93,74,55,.3);background:rgba(255,253,248,.4)}
+.btn-ghost:hover{background:var(--ivory);border-color:var(--brown)}
+.hero-visual{position:relative}
+.hero-visual-frame{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;overflow:hidden;background:linear-gradient(180deg,#e9dcc6,#d9c4a3);box-shadow:var(--shadow);position:relative}
+.hero-visual-frame::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,253,248,.4),transparent 50%)}
+.hero-visual-frame img{width:100%;height:100%;object-fit:cover}
+.hero-deco{position:absolute;width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,#fffdf8,#f3ebde);box-shadow:var(--shadow-soft);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.4}
+.hero-deco-1{bottom:-20px;left:-30px;animation:float 5s ease-in-out infinite}
+.hero-deco-2{top:20px;right:-20px;width:110px;height:110px;animation:float 6s ease-in-out infinite reverse}
+.hero-deco .num{font-family:var(--latin);font-size:30px;color:var(--gold);font-weight:400;line-height:1}
+.hero-deco .label{font-size:10px;color:var(--brown);letter-spacing:.14em;margin-top:6px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@media(max-width:880px){
+  .hero{padding-top:100px;min-height:auto}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-visual{order:-1;max-width:340px;margin-inline:auto}
+  .hero-deco-1{left:-10px;bottom:-10px}
+  .hero-deco-2{right:-10px;top:10px}
+}
+
+/* ========== Sympathy (悩み共感) ========== */
+.sympathy{background:linear-gradient(180deg,#f3ebde 0%,#faf6f0 100%);position:relative}
+.symp-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:50px}
+.symp-item{background:var(--ivory);padding:28px 28px 28px 60px;border-radius:8px;position:relative;box-shadow:var(--shadow-soft);font-size:15px;line-height:1.8;color:var(--brown)}
+.symp-item::before{content:"✓";position:absolute;left:24px;top:28px;width:24px;height:24px;background:var(--wood);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px}
+.symp-item strong{color:var(--wood-dark);font-weight:600}
+.symp-tail{text-align:center;margin-top:48px;font-family:var(--serif);font-size:clamp(18px,2.4vw,24px);color:var(--brown-deep);line-height:1.8}
+.symp-tail em{font-style:normal;color:var(--wood-dark);background:linear-gradient(transparent 60%,rgba(184,152,90,.2) 60%)}
+
+/* ========== Problem (問題提起) ========== */
+.problem{background:#fffdf8;text-align:center}
+.problem-quote{font-family:var(--serif);font-size:clamp(20px,2.8vw,28px);line-height:1.9;color:var(--brown-deep);margin:30px auto;max-width:760px}
+.problem-quote .big{display:block;color:var(--accent);font-size:1.3em;margin-top:14px;letter-spacing:.05em}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
+.problem-card{padding:36px 24px;background:linear-gradient(180deg,#faf6f0,#fffdf8);border:1px solid rgba(184,152,90,.15);border-radius:12px;text-align:center}
+.problem-card .icon{width:54px;height:54px;margin:0 auto 18px;background:rgba(184,152,90,.08);border:1px solid rgba(184,152,90,.4);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.problem-card .icon .rn{font-family:var(--latin);font-style:italic;font-size:22px;color:var(--gold);letter-spacing:.04em}
+.problem-card h4{font-family:var(--serif);font-size:17px;color:var(--brown-deep);margin-bottom:10px}
+.problem-card p{font-size:13px;color:#7a6b58;line-height:1.8}
+@media(max-width:680px){.problem-grid{grid-template-columns:1fr}}
+
+/* ========== Cause (原因の提示) ========== */
+.cause{background:linear-gradient(180deg,#f3ebde 0%,#e9dcc6 100%);position:relative;overflow:hidden}
+.cause::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 80% 30%,rgba(255,253,248,.5),transparent 50%);pointer-events:none}
+.cause-inner{position:relative;z-index:1}
+.cause-flip{max-width:760px;margin:0 auto;text-align:center}
+.flip-row{display:flex;align-items:center;gap:24px;justify-content:center;margin:30px 0;flex-wrap:wrap}
+.flip-card{padding:24px 28px;border-radius:14px;background:#fff;box-shadow:var(--shadow-soft);min-width:240px}
+.flip-card.bad{background:rgba(255,255,255,.7);text-decoration:line-through;color:#a89784;opacity:.7}
+.flip-card.good{background:linear-gradient(135deg,#fffdf8,#f3ebde);border:1px solid var(--gold)}
+.flip-card h5{font-family:var(--serif);font-size:14px;color:var(--wood-dark);margin-bottom:8px;letter-spacing:.1em}
+.flip-card p{font-size:15px;font-weight:500;color:var(--brown-deep)}
+.flip-arrow{font-size:26px;color:var(--gold)}
+.cause-note{margin-top:40px;padding:30px;background:rgba(255,253,248,.7);border-left:3px solid var(--gold);border-radius:6px;font-size:15px;line-height:2;color:var(--brown);max-width:720px;margin-inline:auto}
+
+/* ========== Solution (解決策) ========== */
+.solution{background:var(--beige-50)}
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+@media(max-width:980px){.sol-grid{grid-template-columns:1fr 1fr}}
+.sol-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transition:.4s}
+.sol-card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(120,90,60,.12)}
+.sol-img{aspect-ratio:16/10;background:linear-gradient(135deg,#e9dcc6,#d9c4a3);position:relative;overflow:hidden}
+.sol-img img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.sol-card:hover .sol-img img{transform:scale(1.06)}
+.sol-img-label{position:absolute;top:18px;left:18px;background:rgba(255,253,248,.92);padding:6px 16px;border-radius:999px;font-family:var(--latin);font-style:italic;font-size:13px;color:var(--wood-dark);letter-spacing:.14em}
+.sol-body{padding:32px 30px 36px}
+.sol-body h3{font-family:var(--serif);font-size:22px;color:var(--brown-deep);margin-bottom:6px;letter-spacing:.05em}
+.sol-body .read{font-family:var(--latin);font-style:italic;font-size:12px;color:var(--wood);letter-spacing:.2em;margin-bottom:18px}
+.sol-body p{font-size:14px;line-height:2;color:#5d5042}
+.sol-body .feat{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.sol-body .feat span{font-size:11px;padding:5px 12px;background:rgba(184,152,90,.1);color:var(--wood-dark);border-radius:999px;letter-spacing:.1em}
+@media(max-width:780px){.sol-grid{grid-template-columns:1fr}}
+
+/* ========== Benefit (理想の日常) ========== */
+.benefit{background:linear-gradient(180deg,#fffdf8 0%,#f3ebde 100%);text-align:center;position:relative}
+.benefit-illust{max-width:680px;margin:40px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ben-card{padding:34px 18px;background:#fff;border-radius:14px;box-shadow:var(--shadow-soft);position:relative}
+.ben-card .circle{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#f3ebde,#e9dcc6);margin:0 auto 16px;display:flex;align-items:center;justify-content:center}
+.ben-icon{width:46px;height:46px;margin:0 auto 18px;display:block;color:var(--wood-dark);opacity:.85}
+.ben-card h4{font-family:var(--serif);font-size:15px;color:var(--brown-deep);line-height:1.6;letter-spacing:.05em}
+.ben-quote{margin-top:60px;font-family:var(--serif);font-size:clamp(18px,2.4vw,24px);color:var(--brown-deep);line-height:2;max-width:760px;margin-inline:auto}
+.ben-quote::before,.ben-quote::after{content:"";display:block;width:36px;height:1px;background:var(--gold);margin:24px auto}
+@media(max-width:680px){.benefit-illust{grid-template-columns:1fr}}
+
+/* ========== Features (特徴・選ばれる理由) ========== */
+.features{background:#fffdf8}
+.feat-list{display:flex;flex-direction:column;gap:30px;margin-top:60px;max-width:920px;margin-inline:auto}
+.feat-row{display:grid;grid-template-columns:120px 1fr;gap:36px;align-items:start;padding:30px;border-radius:16px;background:linear-gradient(180deg,#faf6f0,#fffdf8);border:1px solid rgba(184,152,90,.12)}
+.feat-num{font-family:var(--latin);font-size:64px;line-height:1;color:var(--gold);font-style:italic;font-weight:300}
+.feat-row h3{font-family:var(--serif);font-size:21px;color:var(--brown-deep);margin-bottom:12px;letter-spacing:.04em}
+.feat-row p{font-size:14px;line-height:2;color:#5d5042}
+@media(max-width:680px){.feat-row{grid-template-columns:1fr;gap:8px;padding:24px}.feat-num{font-size:48px}}
+
+/* ========== Voice (お客様の声) ========== */
+.voice{background:linear-gradient(180deg,#f3ebde 0%,#e9dcc6 100%);position:relative;overflow:hidden}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.voice-card{background:#fffdf8;padding:32px 28px;border-radius:16px;box-shadow:var(--shadow-soft);position:relative}
+.voice-card::before{content:"\201C";position:absolute;top:-10px;left:18px;font-family:var(--serif);font-size:80px;color:rgba(184,152,90,.2);line-height:1}
+.voice-rating{color:var(--gold);font-size:15px;letter-spacing:.2em;margin-bottom:14px}
+.voice-card h4{font-family:var(--serif);font-size:16px;color:var(--brown-deep);margin-bottom:14px;line-height:1.6}
+.voice-card p{font-size:13px;line-height:1.95;color:#5d5042;margin-bottom:20px}
+.voice-meta{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid rgba(184,152,90,.18);font-size:12px;color:var(--wood-dark)}
+.voice-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#e9dcc6,#d9c4a3);flex-shrink:0}
+@media(max-width:880px){.voice-grid{grid-template-columns:1fr}}
+
+/* ========== Profile (院長プロフィール) ========== */
+.profile{background:#fffdf8}
+.prof-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;margin-top:50px}
+.prof-img{aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#e9dcc6,#d9c4a3);position:relative;box-shadow:var(--shadow)}
+.prof-img img{width:100%;height:100%;object-fit:cover}
+.prof-body .name-jp{font-family:var(--serif);font-size:30px;color:var(--brown-deep);letter-spacing:.06em}
+.prof-body .name-en{font-family:var(--latin);font-style:italic;color:var(--wood);letter-spacing:.18em;margin:8px 0 24px}
+.prof-body .role{display:inline-block;padding:6px 16px;background:rgba(184,152,90,.12);color:var(--wood-dark);border-radius:999px;font-size:12px;letter-spacing:.14em;margin-bottom:20px}
+.prof-body p{font-size:14px;line-height:2.1;color:#5d5042;margin-bottom:16px}
+.prof-creds{margin-top:24px;padding:24px;background:var(--beige-50);border-radius:12px}
+.prof-creds h5{font-family:var(--serif);font-size:13px;color:var(--wood-dark);letter-spacing:.14em;margin-bottom:12px}
+.prof-creds ul li{font-size:13px;color:var(--brown);padding-left:18px;position:relative;line-height:2}
+.prof-creds ul li::before{content:"◆";position:absolute;left:0;color:var(--gold);font-size:9px;top:8px}
+@media(max-width:780px){.prof-grid{grid-template-columns:1fr;gap:40px}.prof-img{max-width:340px;margin-inline:auto}}
+
+/* ========== Flow (ご来院の流れ) ========== */
+.flow{background:linear-gradient(180deg,#faf6f0 0%,#f3ebde 100%)}
+.flow-list{margin-top:50px;max-width:760px;margin-inline:auto;position:relative}
+.flow-list::before{content:"";position:absolute;left:39px;top:30px;bottom:30px;width:2px;background:linear-gradient(180deg,var(--gold),transparent);border-radius:1px}
+.flow-item{display:grid;grid-template-columns:80px 1fr;gap:30px;padding:22px 0;align-items:start;position:relative}
+.flow-step{width:80px;height:80px;border-radius:50%;background:#fffdf8;border:2px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:1;box-shadow:var(--shadow-soft)}
+.flow-step .lab{font-family:var(--latin);font-style:italic;font-size:10px;color:var(--wood);letter-spacing:.18em}
+.flow-step .num{font-family:var(--serif);font-size:22px;color:var(--brown-deep);line-height:1}
+.flow-body{padding-top:12px}
+.flow-body h4{font-family:var(--serif);font-size:18px;color:var(--brown-deep);margin-bottom:8px}
+.flow-body p{font-size:13.5px;line-height:1.95;color:#5d5042}
+@media(max-width:680px){.flow-list::before{left:29px}.flow-item{grid-template-columns:60px 1fr;gap:20px}.flow-step{width:60px;height:60px}.flow-step .num{font-size:18px}}
+
+/* ========== Menu (メニュー) ========== */
+.menu{background:#fffdf8}
+.menu-list{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:50px}
+.menu-card{padding:32px 28px;border:1px solid rgba(184,152,90,.18);border-radius:16px;background:linear-gradient(180deg,#faf6f0,#fffdf8);transition:.3s}
+.menu-card:hover{border-color:var(--gold);box-shadow:var(--shadow-soft)}
+.menu-card .badge{display:inline-block;font-family:var(--latin);font-style:italic;font-size:12px;color:var(--wood);letter-spacing:.18em;margin-bottom:10px}
+.menu-card h4{font-family:var(--serif);font-size:19px;color:var(--brown-deep);margin-bottom:14px}
+.menu-card p{font-size:13.5px;line-height:1.9;color:#5d5042;margin-bottom:18px}
+.menu-card .time{font-size:12px;color:var(--wood-dark);letter-spacing:.1em;padding-top:14px;border-top:1px dashed rgba(184,152,90,.3)}
+.menu-note{margin-top:30px;text-align:center;font-size:13px;color:#7a6b58;line-height:1.9}
+@media(max-width:680px){.menu-list{grid-template-columns:1fr}}
+
+/* ========== Q&A ========== */
+.qa{background:linear-gradient(180deg,#f3ebde 0%,#faf6f0 100%)}
+.qa-list{max-width:780px;margin:50px auto 0}
+.qa-item{background:#fffdf8;border-radius:12px;margin-bottom:14px;box-shadow:var(--shadow-soft);overflow:hidden;transition:.3s}
+.qa-q{padding:24px 26px 24px 64px;font-family:var(--serif);font-size:15px;color:var(--brown-deep);cursor:pointer;position:relative;display:flex;justify-content:space-between;align-items:center;gap:14px;line-height:1.7;width:100%;text-align:left}
+.qa-q::before{content:"Q";position:absolute;left:22px;top:50%;transform:translateY(-50%);font-family:var(--latin);font-style:italic;color:var(--gold);font-size:22px}
+.qa-q::after{content:"+";font-size:24px;color:var(--wood);transition:.3s;font-weight:300;flex-shrink:0}
+.qa-item.is-open .qa-q::after{transform:rotate(45deg)}
+.qa-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.qa-item.is-open .qa-a{max-height:400px}
+.qa-a-inner{padding:0 26px 26px 64px;font-size:13.5px;line-height:2;color:#5d5042;position:relative}
+.qa-a-inner::before{content:"A";position:absolute;left:22px;top:-2px;font-family:var(--latin);font-style:italic;color:var(--accent);font-size:22px}
+
+/* ========== Access ========== */
+.access{background:#fffdf8}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:50px;align-items:start}
+.access-info dl{display:grid;grid-template-columns:120px 1fr;gap:16px 20px;font-size:14px;line-height:1.9}
+.access-info dt{font-family:var(--serif);color:var(--wood-dark);font-size:13px;padding-top:4px;border-right:1px solid rgba(184,152,90,.2)}
+.access-info dd{margin:0;color:var(--brown);padding-bottom:16px;border-bottom:1px solid rgba(184,152,90,.1)}
+.access-info dl > div{display:contents}
+.access-map{aspect-ratio:4/3;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-soft);background:var(--beige-200)}
+.access-map iframe{width:100%;height:100%;border:0;filter:saturate(.85) sepia(.1)}
+.schedule{margin-top:30px;width:100%;border-collapse:separate;border-spacing:0;font-size:13px;background:var(--beige-50);border-radius:12px;overflow:hidden}
+.schedule th,.schedule td{padding:14px 8px;text-align:center;border-bottom:1px solid rgba(184,152,90,.15)}
+.schedule thead th{background:var(--wood);color:#fff;font-weight:500;letter-spacing:.06em;font-size:12px}
+.schedule tbody th{background:var(--beige-100);color:var(--brown-deep);font-weight:500;text-align:left;padding-left:18px}
+.schedule td:last-child,.schedule th:last-child{border-right:0}
+.schedule tr:last-child td,.schedule tr:last-child th{border-bottom:0}
+.schedule .mark{color:var(--accent);font-weight:600}
+@media(max-width:880px){.access-grid{grid-template-columns:1fr}.access-info dl{grid-template-columns:90px 1fr}}
+
+/* ========== CTA ========== */
+.cta{background:
+  linear-gradient(180deg,rgba(61,52,44,.78),rgba(61,52,44,.78)),
+  radial-gradient(circle at 30% 30%,#8a6e52,#3d342c);color:#fffdf8;text-align:center;padding:80px 0;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background-image:
+  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><defs><pattern id='g' width='200' height='80' patternUnits='userSpaceOnUse'><path d='M0 40 Q50 10 100 40 T200 40' fill='none' stroke='%23b8985a' stroke-width='1' opacity='.2'/></pattern></defs><rect width='100%' height='100%' fill='url(%23g)'/></svg>");
+  opacity:.4}
+.cta-inner{position:relative;z-index:1}
+.cta .eyebrow{color:var(--gold)}
+.cta h2{font-family:var(--serif);font-size:clamp(24px,3.6vw,36px);line-height:1.6;margin-bottom:18px;letter-spacing:.06em}
+.cta p{font-size:14px;line-height:2;opacity:.9;max-width:560px;margin:0 auto 36px}
+.cta-buttons{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.cta .btn-primary{background:linear-gradient(135deg,#d9c4a3,#b89878);color:var(--brown-deep);box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.cta .btn-ghost{color:#fffdf8;border-color:rgba(255,253,248,.4)}
+.cta .btn-ghost:hover{background:rgba(255,253,248,.1)}
+
+/* ========== Floating CTA (mobile) ========== */
+.float-cta{position:fixed;left:14px;right:14px;bottom:14px;z-index:40;display:none;background:var(--wood-dark);color:#fff;text-align:center;padding:16px;border-radius:999px;font-size:14px;letter-spacing:.14em;font-weight:500;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+@media(max-width:880px){.float-cta{display:block}body{padding-bottom:80px}}
+
+/* ========== Footer ========== */
+.footer{background:#2e2820;color:rgba(255,253,248,.7);padding:60px 0 30px;font-size:13px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;margin-bottom:40px}
+.footer .logo-jp{color:#fffdf8;font-size:20px}
+.footer .logo-en{color:var(--gold)}
+.footer p{margin-top:14px;line-height:1.95;font-size:12.5px}
+.footer h5{font-family:var(--serif);color:#fffdf8;font-size:14px;margin-bottom:18px;letter-spacing:.12em}
+.footer ul li{padding:6px 0}
+.footer ul a:hover{color:var(--gold)}
+.footer-bottom{padding-top:30px;border-top:1px solid rgba(255,253,248,.1);text-align:center;font-size:11px;letter-spacing:.14em;color:rgba(255,253,248,.45)}
+@media(max-width:780px){.footer-grid{grid-template-columns:1fr;gap:30px}}
+
+/* ========== Scroll reveal ========== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- ========== New Open Band ========== -->
+<div class="newopen-band">— NEW OPEN —<b>2026年、自律神経からはじめる美容整体サロンが誕生</b></div>
+
+<!-- ========== Header ========== -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-jp">いさか鍼灸・美容整体院</span>
+      <span class="logo-en">ISAKA Acupuncture &amp; Beauty</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#concept">コンセプト</a>
+      <a href="#solution">施術</a>
+      <a href="#profile">院長</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#menu">メニュー</a>
+      <a href="#access">アクセス</a>
+      <a href="#cta-final" class="nav-cta">ご予約</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== Hero ========== -->
+<section class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Grand Opening &mdash; A New Era of Beauty &amp; Wellness</span>
+      <h1>その不調も、その表情のもたつきも、<br>
+      原因は<span class="accent">「自律神経の乱れ」</span>かもしれません。</h1>
+      <p class="hero-lead">
+        薬や強い刺激に頼らず、<strong>脳からの神経伝達エラー</strong>に着目した新しいアプローチで、<br>
+        美容と不調の根本原因へ。40〜60代の女性に選ばれる、完全予約制の美容整体・鍼灸サロンです。
+      </p>
+      <div class="hero-meta">
+        <span class="tag" style="background:linear-gradient(135deg,#c98664,#b8985a);color:#fffdf8;border-color:transparent">New Open</span>
+        <span class="tag">自律神経 × 美容整体</span>
+        <span class="tag">完全予約制 / 1対1</span>
+        <span class="tag">SAMMO × フィケラピー × 美容鍼</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#cta-final">初回ご予約はこちら</a>
+        <a class="btn btn-ghost" href="#solution">施術について見る</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-frame">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hbg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f3ebde"/>
+              <stop offset="55%" stop-color="#e9dcc6"/>
+              <stop offset="100%" stop-color="#d9c4a3"/>
+            </linearGradient>
+            <radialGradient id="hlight" cx="35%" cy="22%" r="60%">
+              <stop offset="0%" stop-color="#fffdf8" stop-opacity=".75"/>
+              <stop offset="100%" stop-color="#fffdf8" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="hskin" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f0d8be"/>
+              <stop offset="100%" stop-color="#d6b692"/>
+            </linearGradient>
+            <linearGradient id="hhair" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3d2e22"/>
+              <stop offset="100%" stop-color="#5d4a37"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#hbg)"/>
+          <rect width="400" height="500" fill="url(#hlight)"/>
+          <!-- 流線パターン -->
+          <g stroke="#b8985a" stroke-width=".5" fill="none" opacity=".28">
+            <path d="M-10 80 Q 100 50 200 90 T 410 80"/>
+            <path d="M-10 120 Q 100 90 200 130 T 410 120"/>
+            <path d="M-10 430 Q 100 400 200 440 T 410 430"/>
+            <path d="M-10 470 Q 100 440 200 480 T 410 470"/>
+          </g>
+          <!-- 桜の小花アクセント -->
+          <g fill="#b8985a" opacity=".25">
+            <circle cx="50" cy="60" r="3"/><circle cx="60" cy="55" r="2"/>
+            <circle cx="350" cy="450" r="3"/><circle cx="340" cy="445" r="2"/>
+          </g>
+          <!-- 横たわる横顔（仰向け、上を向いた顔） -->
+          <!-- 髪 -->
+          <path d="M 80 280 Q 70 220 110 195 Q 165 180 220 188 Q 270 195 285 210 Q 280 235 260 245 Q 235 250 200 250 Q 160 252 130 268 Q 105 285 90 305 Z" fill="url(#hhair)"/>
+          <!-- 顔 (横向き、上を向いている) -->
+          <path d="M 130 268 Q 105 285 90 320 Q 88 340 105 348 Q 130 352 145 348 Q 162 345 168 330 Q 178 308 175 290 Q 175 273 160 268 Q 144 264 130 268 Z" fill="url(#hskin)"/>
+          <!-- 鼻のライン -->
+          <path d="M 92 318 Q 80 320 80 326 Q 80 332 90 332" fill="none" stroke="#a88864" stroke-width="1.2" stroke-linecap="round"/>
+          <!-- 閉じた目 -->
+          <path d="M 112 308 Q 122 305 132 308" fill="none" stroke="#5d4a37" stroke-width="1.4" stroke-linecap="round"/>
+          <!-- まつげ -->
+          <path d="M 113 306 L 112 302 M 118 305 L 117 301 M 124 305 L 124 301 M 130 306 L 131 302" fill="none" stroke="#3d2e22" stroke-width=".8" stroke-linecap="round"/>
+          <!-- 口 -->
+          <path d="M 105 340 Q 115 343 128 340" fill="none" stroke="#a06850" stroke-width="1.3" stroke-linecap="round"/>
+          <!-- 耳 -->
+          <path d="M 168 308 Q 178 312 175 322 Q 172 328 168 326" fill="url(#hskin)" stroke="#a88864" stroke-width=".8"/>
+          <!-- 首〜肩 -->
+          <path d="M 145 348 Q 150 380 185 395 Q 230 410 290 410 L 400 410 L 400 500 L 0 500 L 0 380 Q 40 360 90 350 Z" fill="#c9a778"/>
+          <!-- 施術者の手（指先） -->
+          <g fill="url(#hskin)" stroke="#a88864" stroke-width=".8" opacity=".95">
+            <path d="M 210 250 Q 220 248 232 252 Q 240 256 240 264 Q 240 272 232 274 L 215 274 Q 208 270 207 262 Q 207 254 210 250 Z"/>
+            <!-- 指 -->
+            <path d="M 175 268 Q 178 250 188 248 Q 198 248 199 260 Q 198 270 192 272 Z"/>
+            <path d="M 192 256 Q 195 240 205 240 Q 215 240 215 252 Q 214 264 208 266 Z"/>
+            <path d="M 210 252 Q 215 238 226 240 Q 235 244 233 254 Q 230 263 224 264 Z"/>
+          </g>
+          <!-- 装飾の光の粒 -->
+          <g fill="#fffdf8">
+            <circle cx="320" cy="100" r="2.5" opacity=".7"/>
+            <circle cx="350" cy="160" r="1.8" opacity=".5"/>
+            <circle cx="295" cy="60" r="2" opacity=".6"/>
+            <circle cx="45" cy="380" r="2.2" opacity=".5"/>
+          </g>
+          <!-- 細い装飾線 -->
+          <line x1="0" y1="498" x2="400" y2="498" stroke="#b8985a" stroke-width=".5" opacity=".4"/>
+        </svg>
+      </div>
+      <div class="hero-deco hero-deco-1" style="background:linear-gradient(135deg,#c98664,#b8985a);color:#fffdf8">
+        <div class="num" style="color:#fffdf8;font-size:22px;letter-spacing:.08em">NEW</div>
+        <div class="label" style="color:#fffdf8;font-family:var(--latin);font-style:italic;letter-spacing:.2em;font-size:13px;margin-top:2px">OPEN</div>
+      </div>
+      <div class="hero-deco hero-deco-2">
+        <div class="num">1on1</div>
+        <div class="label">完全個別</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Sympathy 共感 ========== -->
+<section class="section sympathy" id="concept">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Empathy</span>
+      <h2 class="h-title">こんなお悩み、<br>抱えていませんか？</h2>
+      <div class="divider"><span>FOR YOU</span></div>
+    </div>
+    <ul class="symp-list reveal">
+      <li class="symp-item">鏡を見るたびに、<strong>たるみ・左右差・輪郭のぼやけ</strong>が気になる</li>
+      <li class="symp-item">エステに通っても、<strong>翌週には元通り</strong>になってしまう</li>
+      <li class="symp-item">眠りが浅く、<strong>朝から疲れている感じ</strong>が抜けない</li>
+      <li class="symp-item">病院では「異常なし」。<strong>でも、原因のわからない不調</strong>が続いている</li>
+      <li class="symp-item">頭痛・めまい・動悸など、<strong>自律神経の乱れ</strong>を感じる</li>
+      <li class="symp-item">「もう年齢のせい」と、<strong>あきらめかけている</strong></li>
+    </ul>
+    <p class="symp-tail reveal">
+      ひとつでも当てはまる方は、どうかこのまま<br>
+      <em>少しだけ読み進めてみてください。</em>
+    </p>
+  </div>
+</section>
+
+<!-- ========== Problem 問題提起 ========== -->
+<section class="section problem">
+  <div class="narrow reveal">
+    <span class="eyebrow">The Real Issue</span>
+    <h2 class="h-title">"なんとなく不調"を放っておくと、<br>身体は静かに、確実に変わっていきます。</h2>
+    <p class="problem-quote">
+      凝り、痛み、眠れない、気持ちが沈む——。<br>
+      それらは身体からのサインを"後回し"にしたぶん、<br>
+      <span class="big">深く・長く・複雑に</span>絡んでいきます。
+    </p>
+    <div class="problem-grid reveal">
+      <div class="problem-card">
+        <div class="icon"><span class="rn">I</span></div>
+        <h4>慢性化</h4>
+        <p>不調が「いつもの自分」になり、<br>本来の心地よさを忘れてしまう。</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon"><span class="rn">II</span></div>
+        <h4>自律神経の乱れ</h4>
+        <p>眠りの質・気分・代謝まで連鎖し、<br>毎日の活力が少しずつ目減りする。</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon"><span class="rn">III</span></div>
+        <h4>見た目への影響</h4>
+        <p>姿勢・むくみ・表情のたるみとして<br>"なんとなくの疲れ顔"が定着する。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Cause 原因の提示 ========== -->
+<section class="section cause">
+  <div class="narrow cause-inner reveal">
+    <div style="text-align:center">
+      <span class="eyebrow">The True Cause</span>
+      <h2 class="h-title">本当の原因は、<br>"揉んでほぐす場所"ではない。</h2>
+      <div class="divider"><span>RE-THINK</span></div>
+    </div>
+    <div class="cause-flip">
+      <div class="flip-row">
+        <div class="flip-card bad">
+          <h5>これまでの常識</h5>
+          <p>凝った場所を強く揉む<br>歪んだ骨格をボキボキ矯正する</p>
+        </div>
+        <div class="flip-arrow">→</div>
+        <div class="flip-card good">
+          <h5>本当の鍵</h5>
+          <p>痛みも歪みも、たるみも、<br><strong>「脳からの神経伝達エラー」</strong>として捉える</p>
+        </div>
+      </div>
+    </div>
+    <p class="cause-note">
+      身体は、脳からの神経信号によって筋肉・骨格・表情・自律神経すべてがコントロールされています。<br>
+      この<strong>神経の伝達がうまくいかなくなった状態</strong>こそが、<br>
+      慢性的な不調・お顔のたるみ・自律神経の乱れの<strong>本当の原因</strong>。<br>
+      だから当院は——<strong>「揉む・矯正する」のではなく、「神経を整えて、本来の機能を取り戻す」</strong>ことを大切にしています。
+    </p>
+  </div>
+</section>
+
+<!-- ========== Solution 解決策 ========== -->
+<section class="section solution" id="solution">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Our Approach</span>
+      <h2 class="h-title">自律神経と神経伝達に着目した<br>3つの専門アプローチ</h2>
+      <p class="h-sub">— SAMMO &nbsp;×&nbsp; FIKETHERAPY &nbsp;×&nbsp; ACUPUNCTURE —</p>
+    </div>
+    <div class="sol-grid">
+      <article class="sol-card reveal">
+        <div class="sol-img">
+          <span class="sol-img-label">Approach 01</span>
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80" alt="フィケラピー 美容整体フェイシャル">
+        </div>
+        <div class="sol-body">
+          <p class="read">For Your Beauty</p>
+          <h3>フィケラピー<small style="display:block;font-family:var(--latin);font-style:italic;font-size:11px;color:var(--wood);letter-spacing:.18em;font-weight:300;margin-top:4px">FIKETHERAPY</small></h3>
+          <p>
+            お顔のたるみ・左右差・むくみを、表面ではなく<strong>自律神経と神経伝達のレベル</strong>から整える美容整体。<br>
+            フェイシャルケアと自律神経調整の両側面で、内側から表情を取り戻していきます。
+          </p>
+          <div class="feat">
+            <span>美容整体</span>
+            <span>フェイスライン</span>
+            <span>自律神経ケア</span>
+          </div>
+        </div>
+      </article>
+      <article class="sol-card reveal">
+        <div class="sol-img">
+          <span class="sol-img-label">Approach 02</span>
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="サーモグラフィー SAMMO 神経アプローチ">
+        </div>
+        <div class="sol-body">
+          <p class="read">For Your Nerves</p>
+          <h3>サーモグラフィー<small style="display:block;font-family:var(--latin);font-style:italic;font-size:11px;color:var(--wood);letter-spacing:.18em;font-weight:300;margin-top:4px">SAMMO &nbsp;/&nbsp; TN BRAIN</small></h3>
+          <p>
+            身体の不調を「脳からの神経伝達エラー」として捉え、神経そのものへ働きかける専門アプローチ。<br>
+            三叉神経（TNブレイン）への直接的なケアで、頭痛・めまい・原因不明の不調にお応えします。
+          </p>
+          <div class="feat">
+            <span>神経アプローチ</span>
+            <span>三叉神経</span>
+            <span>根本原因</span>
+          </div>
+        </div>
+      </article>
+      <article class="sol-card reveal">
+        <div class="sol-img">
+          <span class="sol-img-label">Approach 03</span>
+          <img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?auto=format&fit=crop&w=900&q=80" alt="美容鍼">
+        </div>
+        <div class="sol-body">
+          <p class="read">For Your Skin &amp; Body</p>
+          <h3>美容鍼<small style="display:block;font-family:var(--latin);font-style:italic;font-size:11px;color:var(--wood);letter-spacing:.18em;font-weight:300;margin-top:4px">BEAUTY ACUPUNCTURE</small></h3>
+          <p>
+            極細の専用鍼で、お顔の深層筋と血流に直接アプローチ。<br>
+            フィケラピーやSAMMOと組み合わせることで、美容効果と自律神経ケアの相乗作用を引き出します。
+          </p>
+          <div class="feat">
+            <span>美容鍼</span>
+            <span>ハリ・ツヤ</span>
+            <span>深層筋ケア</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Benefit 理想の日常 ========== -->
+<section class="section benefit">
+  <div class="narrow reveal">
+    <span class="eyebrow">Your New Everyday</span>
+    <h2 class="h-title">施術のあとに、<br>取り戻したい"日常"があります。</h2>
+    <div class="benefit-illust">
+      <div class="ben-card">
+        <svg class="ben-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="8"/><path d="M24 6v4M24 38v4M6 24h4M38 24h4M11 11l3 3M34 34l3 3M37 11l-3 3M14 34l-3 3"/></svg>
+        <h4>朝、目覚ましの前に<br>自然と目が覚める</h4>
+      </div>
+      <div class="ben-card">
+        <svg class="ben-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 40c0-12 8-22 18-26-2 14-8 22-18 26zM24 40c0-10-6-18-14-22 2 12 6 18 14 22zM24 40v-12"/></svg>
+        <h4>呼吸が深くなり<br>気持ちに余白が戻る</h4>
+      </div>
+      <div class="ben-card">
+        <svg class="ben-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="6" width="20" height="30" rx="10"/><path d="M14 32h20M20 40h8"/></svg>
+        <h4>鏡の中の自分に<br>少し優しくなれる</h4>
+      </div>
+    </div>
+    <p class="ben-quote">
+      私たちが目指すのは、"痛みを消すこと"ではなく、<br>
+      <strong>「あなたが、あなたらしく過ごせる日常」</strong>そのものです。
+    </p>
+    <div style="margin-top:24px">
+      <a class="btn btn-primary" href="#cta-final">この日常を取り戻す</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Features 選ばれる理由 ========== -->
+<section class="section features">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Why We Are Chosen</span>
+      <h2 class="h-title">いさか鍼灸・美容整体院が<br>選ばれる5つの理由</h2>
+      <div class="divider"><span>OUR PROMISE</span></div>
+    </div>
+    <div class="feat-list">
+      <div class="feat-row reveal"><div class="feat-num">01</div><div><h3>自律神経の乱れを"原因"からアプローチ</h3><p>表面的な施術ではなく、脳からの神経伝達という根本原因に着目。だから施術後の変化が、ご自宅に帰ってからも続きやすいのです。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">02</div><div><h3>美容と不調ケアを、同じ視点で同時に</h3><p>お顔のたるみも、長年の不調も、原因は同じ"神経の乱れ"にあると考えます。美容整体（フィケラピー）と自律神経ケアを一度にご提供できる、新しいサロンです。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">03</div><div><h3>40〜60代の女性に選ばれる、落ち着いた空間</h3><p>慌ただしいエステや治療院とは違う、静かな個室。お一人の時間を大切にされたい方、人目を気にしたくない方に安心してお過ごしいただけます。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">04</div><div><h3>完全予約制・1対1の丁寧なカウンセリング</h3><p>「どこが気になるか」だけでなく、生活リズム・睡眠・心の状態まで丁寧に伺います。原因を一緒に紐解くところから施術が始まります。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">05</div><div><h3>痛くない・ボキボキしない、優しい施術</h3><p>強い圧や急な矯正は一切ありません。神経への繊細なアプローチだからこそ、施術中に眠ってしまわれる方も多くいらっしゃいます。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Voice お客様の声 ========== -->
+<section class="section voice" id="voice">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Voice</span>
+      <h2 class="h-title">プレオープン期に体験いただいた<br>モニター様のお声</h2>
+      <div class="divider"><span>MONITOR VOICES</span></div>
+    </div>
+    <div class="voice-grid">
+      <article class="voice-card reveal">
+        <div class="voice-rating">★★★★★</div>
+        <h4>翌朝、鏡を見るのが少し楽しみになりました。</h4>
+        <p>強く押されないのに、終わったあとはお顔がすっきり。「ボキボキしないのに、こんなに違うんだ」と素直に驚きました。続けて通いたい施術です。</p>
+        <div class="voice-meta"><div class="voice-avatar"></div><span>50代女性／フィケラピー体験</span></div>
+      </article>
+      <article class="voice-card reveal">
+        <div class="voice-rating">★★★★★</div>
+        <h4>長年の頭の重さが、ふっと軽くなる感覚。</h4>
+        <p>頭痛とめまいに悩まされ続けていましたが、神経からのアプローチという発想が新鮮でした。施術後の身体の感覚に、これまでにない静けさがありました。</p>
+        <div class="voice-meta"><div class="voice-avatar"></div><span>40代女性／SAMMO体験</span></div>
+      </article>
+      <article class="voice-card reveal">
+        <div class="voice-rating">★★★★★</div>
+        <h4>カウンセリングだけで救われた気持ちに。</h4>
+        <p>不調の話を最後まで聴いてくださり、原因を一緒に考えてくれました。"頑張ってきた身体"と向き合ってもらえた感覚は、初めてかもしれません。</p>
+        <div class="voice-meta"><div class="voice-avatar"></div><span>60代女性／トータルコース体験</span></div>
+      </article>
+    </div>
+    <p style="text-align:center;margin-top:30px;font-size:12px;color:#8a7860;letter-spacing:.08em">※プレオープン期のモニター様による感想です。施術の感じ方には個人差があります。</p>
+  </div>
+</section>
+
+<!-- ========== Profile 院長プロフィール ========== -->
+<section class="section profile" id="profile">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Therapist</span>
+      <h2 class="h-title">施術者のご紹介</h2>
+    </div>
+    <div class="prof-grid">
+      <div class="prof-img reveal">
+        <!-- 施術者ポートレート: AI生成画像に差し替えてください -->
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f3ebde"/>
+              <stop offset="60%" stop-color="#e9dcc6"/>
+              <stop offset="100%" stop-color="#d9c4a3"/>
+            </linearGradient>
+            <radialGradient id="light" cx="35%" cy="25%" r="55%">
+              <stop offset="0%" stop-color="#fffdf8" stop-opacity=".7"/>
+              <stop offset="100%" stop-color="#fffdf8" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#8a6e52"/>
+              <stop offset="100%" stop-color="#5d4a37"/>
+            </linearGradient>
+            <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e0c5a4"/>
+              <stop offset="100%" stop-color="#c9aa84"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#bg)"/>
+          <rect width="400" height="500" fill="url(#light)"/>
+          <!-- 肩・上半身 -->
+          <path d="M 60 500 Q 60 380 130 340 Q 200 320 270 340 Q 340 380 340 500 Z" fill="url(#body)"/>
+          <!-- 首 -->
+          <path d="M 170 350 Q 170 320 200 320 Q 230 320 230 350 L 230 380 L 170 380 Z" fill="url(#skin)"/>
+          <!-- 顔 -->
+          <ellipse cx="200" cy="240" rx="78" ry="92" fill="url(#skin)"/>
+          <!-- 髪 -->
+          <path d="M 122 220 Q 130 140 200 130 Q 270 140 278 220 Q 270 175 245 165 Q 240 195 200 195 Q 160 195 155 165 Q 130 175 122 220 Z" fill="#3d342c"/>
+          <!-- アクセント線 -->
+          <line x1="60" y1="498" x2="340" y2="498" stroke="#b8985a" stroke-width=".5" opacity=".4"/>
+          <!-- ロゴ風モノグラム -->
+          <text x="200" y="475" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#fffdf8" opacity=".55" letter-spacing="6">ISAKA</text>
+        </svg>
+      </div>
+      <div class="prof-body reveal">
+        <span class="role">院長 / 施術者</span>
+        <h3 class="name-jp">井坂 剛士</h3>
+        <p class="name-en">ISAKA Takeshi</p>
+        <p>「強く揉めば良くなる」と信じて、押して・揉んで・矯正してきた日々がありました。でも、ある時気づいたのです——身体の不調も、お顔のたるみも、そのほとんどは<strong>"脳からの神経伝達エラー"</strong>に行き着くのだと。</p>
+        <p>それからは、サーモグラフィー（SAMMO）による神経アプローチと、自律神経を軸にした美容整体「フィケラピー」、そして美容鍼を組み合わせ、<strong>"優しいのに、深く効く"</strong>施術を追求してきました。</p>
+        <p>40〜60代の女性が「もう年齢のせい」とあきらめてしまう前に。あなたの身体の声を、一緒に聴かせてください。</p>
+        <div class="prof-creds">
+          <h5>RESUME</h5>
+          <ul>
+            <li>柔道整復師（国家資格）</li>
+            <li>はり師（国家資格）</li>
+            <li>きゅう師（国家資格）</li>
+            <li>フィケラピスト（美容整体）</li>
+            <li>サーモグラフィー（SAMMO）／TNブレイン 認定施術者</li>
+            <li>美容鍼 担当歴 ◯年</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Flow 来院の流れ ========== -->
+<section class="section flow">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Flow</span>
+      <h2 class="h-title">ご来院から、お帰りまで</h2>
+      <p class="h-sub">— 初めての方も、安心してお越しください —</p>
+    </div>
+    <div class="flow-list">
+      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">01</span></div><div class="flow-body"><h4>ご予約・お問い合わせ</h4><p>公式LINEまたは予約フォームから。「初めて」の旨を一言いただけるとスムーズです。</p></div></div>
+      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">02</span></div><div class="flow-body"><h4>カウンセリング（約20分）</h4><p>お身体のお悩みはもちろん、生活リズムや気分の波まで丁寧に伺います。ここがいちばん大切な時間です。</p></div></div>
+      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">03</span></div><div class="flow-body"><h4>姿勢・骨格チェック</h4><p>立ち姿・歩き方・呼吸の深さを確認し、その日の身体に合わせた施術プランをご提案します。</p></div></div>
+      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">04</span></div><div class="flow-body"><h4>施術</h4><p>無痛のアトラゲージ調整＋πテラピーで、身体と自律神経の両方に静かにアプローチ。多くの方が途中で眠ってしまう時間です。</p></div></div>
+      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">05</span></div><div class="flow-body"><h4>アフターアドバイス</h4><p>その日の身体に合わせたセルフケアと、無理のない通院ペースをお伝えします。押し売りは一切ありません。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Menu ========== -->
+<section class="section menu" id="menu">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Menu</span>
+      <h2 class="h-title">施術メニュー</h2>
+      <div class="divider"><span>SERVICES</span></div>
+    </div>
+    <div class="menu-list">
+      <div class="menu-card reveal" style="border:2px solid var(--gold);background:linear-gradient(180deg,#fffdf8,#f3ebde);position:relative">
+        <span style="position:absolute;top:-12px;right:20px;background:var(--gold);color:#fff;font-size:11px;padding:5px 14px;border-radius:999px;letter-spacing:.14em">看板メニュー</span>
+        <span class="badge">— Beauty / Most Popular —</span>
+        <h4>フィケラピー 美容整体フェイシャル</h4>
+        <p>当院の看板メニュー。お顔のたるみ・左右差・むくみを、表情筋ではなく<strong>自律神経と神経伝達のレベル</strong>から整える美容整体です。鏡を見るのが楽しみになる時間を。</p>
+        <p class="time">所要時間：約 60〜75 分</p>
+      </div>
+      <div class="menu-card reveal">
+        <span class="badge">— Beauty &amp; Wellness —</span>
+        <h4>フィケラピー × 美容鍼コース</h4>
+        <p>美容整体と美容鍼を組み合わせ、表層から深層まで多層的にアプローチ。お顔のハリ・ツヤ・引き締まりを目指す方に。</p>
+        <p class="time">所要時間：約 75〜90 分</p>
+      </div>
+      <div class="menu-card reveal">
+        <span class="badge">— Therapy —</span>
+        <h4>SAMMO 自律神経ケア</h4>
+        <p>サーモグラフィー（SAMMO）と三叉神経（TNブレイン）への直接的アプローチで、頭痛・めまい・原因のわからない不調に寄り添う、神経からの根本ケアです。</p>
+        <p class="time">所要時間：約 60 分</p>
+      </div>
+      <div class="menu-card reveal">
+        <span class="badge">— Total —</span>
+        <h4>トータルケアコース</h4>
+        <p>美容（フィケラピー＋美容鍼）と神経ケア（SAMMO）を同日に。お顔も身体も同時に整えたい方のための、贅沢な一連の流れです。</p>
+        <p class="time">所要時間：約 90〜120 分</p>
+      </div>
+    </div>
+    <p class="menu-note">
+      ※ 料金・初回のご案内は、ご予約時または公式LINEにてお伝えしております。<br>
+      お気軽にお問い合わせください。
+    </p>
+  </div>
+</section>
+
+<!-- ========== Q&A ========== -->
+<section class="section qa">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Q &amp; A</span>
+      <h2 class="h-title">ご予約の前に、よくある質問</h2>
+      <div class="divider"><span>BEFORE YOU BOOK</span></div>
+    </div>
+    <div class="qa-list">
+      <div class="qa-item"><button class="qa-q">本当に痛くないですか？ボキボキされませんか？</button><div class="qa-a"><div class="qa-a-inner">はい、ご安心ください。当院ではボキボキする矯正・強い圧でのマッサージは一切行いません。神経への繊細なアプローチが軸ですので、ほとんどの方が「触れているだけ？」と驚かれます。美容鍼も極細の専用鍼を使用しますので、痛みが苦手な方も多くご来院されています。</div></div></div>
+      <div class="qa-item"><button class="qa-q">美容目的だけでも通えますか？</button><div class="qa-a"><div class="qa-a-inner">もちろんです。お顔のたるみや左右差、フェイスラインのもたつきが気になる方には、看板メニューの「フィケラピー」を中心にご案内しています。美容と不調ケアを同時に整えたい方には、トータルコースもご用意しています。</div></div></div>
+      <div class="qa-item"><button class="qa-q">どのくらいの頻度で通えばいいですか？</button><div class="qa-a"><div class="qa-a-inner">お身体の状態によって異なります。初回のカウンセリングで、無理のない通院ペースをご提案します。多くの方は、初期は2週に1回、整ってきたら月1のメンテナンスへ移行されています。</div></div></div>
+      <div class="qa-item"><button class="qa-q">妊娠中・産後でも受けられますか？</button><div class="qa-a"><div class="qa-a-inner">妊娠中の方は、安定期以降であれば体勢を工夫してご対応可能です。産後の方には、骨盤周りと自律神経の両方に配慮した優しいコースをご用意しています。ご予約時に必ずお知らせください。</div></div></div>
+      <div class="qa-item"><button class="qa-q">男性でも予約できますか？</button><div class="qa-a"><div class="qa-a-inner">もちろんご予約いただけます。慢性的な肩こり・腰痛でお悩みの男性の方も多くいらっしゃいます。完全予約制ですので、人目を気にせずお越しいただけます。</div></div></div>
+      <div class="qa-item"><button class="qa-q">施術中に眠ってしまっても大丈夫ですか？</button><div class="qa-a"><div class="qa-a-inner">むしろ大歓迎です。眠りに落ちられるのは、身体と心が安心している証拠。そのままお休みください。終わったタイミングでそっとお声がけします。</div></div></div>
+      <div class="qa-item"><button class="qa-q">服装はどうすればいいですか？</button><div class="qa-a"><div class="qa-a-inner">普段着のままで結構です。必要に応じて、肌当たりの良いリネンの施術着をご用意していますので、お気軽にお越しください。</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Access ========== -->
+<section class="section access" id="access">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal">
+      <span class="eyebrow">Access &amp; Hours</span>
+      <h2 class="h-title">アクセス・営業時間</h2>
+    </div>
+    <div class="access-grid">
+      <div class="access-info reveal">
+        <dl>
+          <div><dt>院名</dt><dd>いさか鍼灸・美容整体院</dd></div>
+          <div><dt>住所</dt><dd>〒550-0022<br>大阪府大阪市西区本田2丁目1-5<br>グリーンヒルズ</dd></div>
+          <div><dt>電話番号</dt><dd>【電話番号】</dd></div>
+          <div><dt>アクセス</dt><dd>大阪メトロ中央線・千日前線「阿波座駅」より徒歩約5分<br>大阪メトロ中央線「九条駅」より徒歩約8分</dd></div>
+          <div><dt>駐車場</dt><dd>近隣コインパーキングをご利用ください</dd></div>
+          <div><dt>予約方法</dt><dd>公式LINE・予約フォーム<br>（完全予約制）</dd></div>
+        </dl>
+        <table class="schedule">
+          <thead><tr><th>営業時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr></thead>
+          <tbody>
+            <tr><th>10:00–20:00</th><td>○</td><td>○</td><td class="mark">休</td><td>○</td><td>○</td><td>○</td><td class="mark">休</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:12px;color:#8a7860;margin-top:14px;line-height:1.8">※ 最終受付は施術コースにより異なります。<br>※ 不定休あり。公式LINEにて最新の空き状況をご確認ください。</p>
+      </div>
+      <div class="access-map reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.0397827755974!2d135.47962500000003!3d34.678945399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e651894a0509%3A0x77dace814141a5fe!2z44CSNTUwLTAwMjIg5aSn6Ziq5bqc5aSn6Ziq5biC6KW_5Yy65pys55Sw77yS5LiB55uu77yR4oiS77yVIOOCsOODquODvOODs-ODkuODq-OCug!5e0!3m2!1sja!2sjp!4v1778743819837!5m2!1sja!2sjp" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Final CTA ========== -->
+<section class="cta" id="cta-final">
+  <div class="cta-inner narrow">
+    <span class="eyebrow">Reservation</span>
+    <h2>頑張ってきた身体に、<br>「いまだけの時間」を。</h2>
+    <p>完全予約制のため、お席に限りがございます。<br>ご予約・ご相談は、公式LINEまたは予約フォームよりお気軽にどうぞ。</p>
+    <div class="cta-buttons">
+      <a class="btn btn-primary" href="#">公式LINEで予約する</a>
+      <a class="btn btn-ghost" href="tel:0000000000">電話で問い合わせる</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Footer ========== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">
+          <span class="logo-jp">いさか鍼灸・美容整体院</span>
+          <span class="logo-en">ISAKA Acupuncture &amp; Beauty</span>
+        </div>
+        <p>頑張りすぎた身体に、本来のリズムを取り戻す。<br>身体と心、両方を整える隠れ家サロン。</p>
+      </div>
+      <div>
+        <h5>Menu</h5>
+        <ul>
+          <li><a href="#concept">コンセプト</a></li>
+          <li><a href="#solution">施術について</a></li>
+          <li><a href="#menu">メニュー</a></li>
+          <li><a href="#profile">院長プロフィール</a></li>
+          <li><a href="#access">アクセス</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>〒550-0022</li>
+          <li>大阪府大阪市西区本田2-1-5<br>グリーンヒルズ</li>
+          <li>TEL：【電話番号】</li>
+          <li>営業：10:00 – 20:00 ／ 水・日休</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© いさか鍼灸・美容整体院 ISAKA Acupuncture &amp; Beauty</div>
+  </div>
+</footer>
+
+<a class="float-cta" href="#cta-final">公式LINEで予約する　→</a>
+
+<script>
+// ハンバーガー
+const mb=document.getElementById('menuBtn'),nv=document.getElementById('nav');
+mb.addEventListener('click',()=>{mb.classList.toggle('is-open');nv.classList.toggle('is-open')});
+nv.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mb.classList.remove('is-open');nv.classList.remove('is-open')}));
+
+// Q&Aアコーディオン
+document.querySelectorAll('.qa-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('is-open')));
+
+// スクロールReveal
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('is-visible')),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ヘッダー陰影
+const hd=document.getElementById('header');
+addEventListener('scroll',()=>{hd.style.boxShadow=scrollY>20?'0 4px 20px rgba(120,90,60,.05)':'none'});
+</script>
+</body>
+</html>
