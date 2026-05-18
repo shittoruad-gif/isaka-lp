@@ -1,7 +1,8 @@
 FROM nginx:1.27-alpine
 
-# 静的LP・関連ページを配信
+# 静的LP・関連ページ・アセットを配信
 COPY index.html tokushoho.html privacy.html /usr/share/nginx/html/
+COPY assets/ /usr/share/nginx/html/assets/
 
 # IPv4/IPv6 両方で待受。ヘルスチェック互換のため [::]:80 も listen
 RUN printf 'server {\n\
