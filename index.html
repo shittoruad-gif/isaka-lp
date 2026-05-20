@@ -20,8 +20,11 @@
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;color:#3d342c;background:#faf6f0;line-height:1.85;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
-/* 日本語の不自然な改行を抑制：句読点を含むフレーズ単位で折り返す（全体適用） */
-body,h1,h2,h3,h4,p,li,dt,dd,span,a{word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
+/* 日本語の不自然な改行：auto-phrase で日本語フレーズ単位の自動折返し（未対応ブラウザは line-break:strict にフォールバック） */
+body{word-break:auto-phrase;line-break:strict;text-wrap:pretty;overflow-wrap:break-word}
+h1,h2,h3,h4,.h-title,.cta h2{text-wrap:balance;line-break:strict;word-break:auto-phrase}
+/* 重要箇所のフレーズ単位ロック */
+.phr{display:inline-block}
 .phr{display:inline-block}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
@@ -55,7 +58,7 @@ ul{margin:0;padding:0;list-style:none}
 .narrow{width:min(820px,92%);margin-inline:auto}
 .section{padding:clamp(60px,9vw,110px) 0;position:relative}
 .eyebrow{display:inline-block;font-family:var(--latin);font-style:italic;color:var(--wood-dark);letter-spacing:.25em;font-size:14px;margin-bottom:14px}
-.h-title{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3.4vw,34px);line-height:1.55;color:var(--brown-deep);text-align:center;margin-bottom:14px}
+.h-title{font-family:var(--serif);font-weight:500;font-size:clamp(20px,5.2vw,34px);line-height:1.6;color:var(--brown-deep);text-align:center;margin-bottom:14px}
 .h-sub{text-align:center;color:#7a6b58;font-size:14px;letter-spacing:.18em;margin-bottom:50px}
 .divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:24px 0 14px;color:var(--wood)}
 .divider::before,.divider::after{content:"";flex:0 0 40px;height:1px;background:currentColor;opacity:.5}
@@ -421,10 +424,10 @@ ul{margin:0;padding:0;list-style:none}
 <section class="section problem">
   <div class="narrow reveal">
     <span class="eyebrow">The Real Issue</span>
-    <h2 class="h-title">"なんとなく不調"を放っておくと、<br>身体は静かに、確実に変わっていきます。</h2>
+    <h2 class="h-title">「なんとなく不調」を放っておくと、<br>身体は静かに、<br>確実に変わっていきます。</h2>
     <p class="problem-quote">
       凝り、痛み、眠れない、気持ちが沈む——。<br>
-      それらは身体からのサインを"後回し"にしたぶん、<br>
+      それらは身体からのサインを「後回し」にしたぶん、<br>
       <span class="big">深く・長く・複雑に</span>絡んでいきます。
     </p>
     <div class="problem-grid reveal">
@@ -441,7 +444,7 @@ ul{margin:0;padding:0;list-style:none}
       <div class="problem-card">
         <div class="icon"><span class="rn">III</span></div>
         <h4>見た目への影響</h4>
-        <p>姿勢・むくみ・表情のたるみとして<br>"なんとなくの疲れ顔"が定着する。</p>
+        <p>姿勢・むくみ・表情のたるみとして<br>「なんとなくの疲れ顔」が定着する。</p>
       </div>
     </div>
   </div>
@@ -452,7 +455,7 @@ ul{margin:0;padding:0;list-style:none}
   <div class="narrow cause-inner reveal">
     <div style="text-align:center">
       <span class="eyebrow">The True Cause</span>
-      <h2 class="h-title">本当の原因は、<br>"揉んでほぐす場所"ではない。</h2>
+      <h2 class="h-title">本当の原因は、<br>「揉んでほぐす場所」ではない。</h2>
       <div class="divider"><span>RE-THINK</span></div>
     </div>
     <div class="cause-flip">
@@ -496,7 +499,7 @@ ul{margin:0;padding:0;list-style:none}
           <h3>πテラピー美容整体<small style="display:block;font-family:var(--latin);font-style:italic;font-size:11px;color:var(--wood);letter-spacing:.18em;font-weight:300;margin-top:4px">πTHERAPY &nbsp;FACIAL</small></h3>
           <p>
             日本と韓国、それぞれの<strong>美の技術を融合して生まれた肌再生プログラム</strong>。専用クリームと皮膚管理プログラムで、肌の外側と内側、そして表情筋へやさしくアプローチします。<br>
-            くすみ・たるみ・むくみ・小顔ライン、首から上の重さやストレスによる揺らぎまで。痛みはほとんどなく、"ストレスのない"心地よさの中で、明るい印象へと導きます。
+            くすみ・たるみ・むくみ・小顔ライン、首から上の重さやストレスによる揺らぎまで。痛みはほとんどなく、「ストレスのない」心地よさの中で、明るい印象へと導きます。
           </p>
           <div class="feat">
             <span>肌再生・小顔</span>
@@ -551,7 +554,7 @@ ul{margin:0;padding:0;list-style:none}
 <section class="section benefit">
   <div class="narrow reveal">
     <span class="eyebrow">Your New Everyday</span>
-    <h2 class="h-title">施術のあとに、<br>取り戻したい"日常"があります。</h2>
+    <h2 class="h-title">施術のあとに、<br>取り戻したい「日常」があります。</h2>
     <div class="benefit-illust">
       <div class="ben-card">
         <svg class="ben-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="8"/><path d="M24 6v4M24 38v4M6 24h4M38 24h4M11 11l3 3M34 34l3 3M37 11l-3 3M14 34l-3 3"/></svg>
@@ -567,7 +570,7 @@ ul{margin:0;padding:0;list-style:none}
       </div>
     </div>
     <p class="ben-quote">
-      私たちが目指すのは、"痛みを消すこと"ではなく、<br>
+      私たちが目指すのは、「痛みを消すこと」ではなく、<br>
       <strong>「あなたが、あなたらしく過ごせる日常」</strong>そのものです。
     </p>
     <div style="margin-top:24px">
@@ -585,8 +588,8 @@ ul{margin:0;padding:0;list-style:none}
       <div class="divider"><span>OUR PROMISE</span></div>
     </div>
     <div class="feat-list">
-      <div class="feat-row reveal"><div class="feat-num">01</div><div><h3>自律神経の乱れを"原因"からアプローチ</h3><p>表面的な施術ではなく、脳からの神経伝達という根本原因に着目。だから施術後の変化が、ご自宅に帰ってからも続きやすいのです。</p></div></div>
-      <div class="feat-row reveal"><div class="feat-num">02</div><div><h3>美容と不調ケアを、同じ視点で同時に</h3><p>お顔のたるみも、長年の不調も、原因は同じ"自律神経の乱れ"にあると考えます。πテラピー美容整体と自律神経整体を一度にご提供できる、新しいサロンです。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">01</div><div><h3>自律神経の乱れを「原因」からアプローチ</h3><p>表面的な施術ではなく、脳からの神経伝達という根本原因に着目。だから施術後の変化が、ご自宅に帰ってからも続きやすいのです。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">02</div><div><h3>美容と不調ケアを、同じ視点で同時に</h3><p>お顔のたるみも、長年の不調も、原因は同じ「自律神経の乱れ」にあると考えます。πテラピー美容整体と自律神経整体を一度にご提供できる、新しいサロンです。</p></div></div>
       <div class="feat-row reveal"><div class="feat-num">03</div><div><h3>40〜60代の女性に選ばれる、落ち着いた空間</h3><p>慌ただしいエステや治療院とは違う、静かな個室。お一人の時間を大切にされたい方、人目を気にしたくない方に安心してお過ごしいただけます。</p></div></div>
       <div class="feat-row reveal"><div class="feat-num">04</div><div><h3>完全予約制・1対1の丁寧なカウンセリング</h3><p>「どこが気になるか」だけでなく、生活リズム・睡眠・心の状態まで丁寧に伺います。原因を一緒に紐解くところから施術が始まります。</p></div></div>
       <div class="feat-row reveal"><div class="feat-num">05</div><div><h3>痛くない・ボキボキしない、優しい施術</h3><p>強い圧や急な矯正は一切ありません。神経への繊細なアプローチだからこそ、施術中に眠ってしまわれる方も多くいらっしゃいます。</p></div></div>
@@ -618,7 +621,7 @@ ul{margin:0;padding:0;list-style:none}
       <article class="voice-card reveal">
         <div class="voice-rating">★★★★★</div>
         <h4>カウンセリングだけで救われた気持ちに。</h4>
-        <p>不調の話を最後まで聴いてくださり、原因を一緒に考えてくれました。"頑張ってきた身体"と向き合ってもらえた感覚は、初めてかもしれません。</p>
+        <p>不調の話を最後まで聴いてくださり、原因を一緒に考えてくれました。「頑張ってきた身体」と向き合ってもらえた感覚は、初めてかもしれません。</p>
         <div class="voice-meta"><div class="voice-avatar"></div><span>60代女性／トータルコース体験</span></div>
       </article>
     </div>
@@ -676,8 +679,8 @@ ul{margin:0;padding:0;list-style:none}
         <span class="role">院長 / 施術者</span>
         <h3 class="name-jp">井坂 剛士</h3>
         <p class="name-en">ISAKA Takeshi</p>
-        <p>「強く揉めば良くなる」と信じて、押して・揉んで・矯正してきた日々がありました。でも、ある時気づいたのです——身体の不調も、お顔のたるみも、そのほとんどは<strong>"脳からの神経伝達エラー"</strong>に行き着くのだと。</p>
-        <p>それからは、日本と韓国の美の技術を融合した美容整体「πテラピー」、自律神経整体、そして骨格矯正を組み合わせ、<strong>"優しいのに、心地よい"</strong>施術を追求してきました。施術歴は22年になります。</p>
+        <p>「強く揉めば良くなる」と信じて、押して・揉んで・矯正してきた日々がありました。でも、ある時気づいたのです——身体の不調も、お顔のたるみも、そのほとんどは<strong>「脳からの神経伝達エラー」</strong>に行き着くのだと。</p>
+        <p>それからは、日本と韓国の美の技術を融合した美容整体「πテラピー」、自律神経整体、そして骨格矯正を組み合わせ、<strong>「優しいのに、心地よい」</strong>施術を追求してきました。施術歴は22年になります。</p>
         <p>40〜60代の女性が「もう年齢のせい」とあきらめてしまう前に。あなたの身体の声を、一緒に聴かせてください。</p>
         <div class="prof-creds">
           <h5>RESUME</h5>
