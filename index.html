@@ -20,6 +20,9 @@
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;color:#3d342c;background:#faf6f0;line-height:1.85;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
+/* 日本語の不自然な改行を抑制：句読点を含むフレーズ単位で折り返す（全体適用） */
+body,h1,h2,h3,h4,p,li,dt,dd,span,a{word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
+.phr{display:inline-block}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
@@ -366,11 +369,10 @@ ul{margin:0;padding:0;list-style:none}
   <div class="hero-grid">
     <div class="hero-copy">
       <span class="eyebrow">Grand Opening &mdash; A New Era of Beauty &amp; Wellness</span>
-      <h1>その不調も、その表情のもたつきも、<br>
-      原因は<span class="accent">「自律神経の乱れ」</span>かもしれません。</h1>
+      <h1><span class="phr">その不調も、</span><span class="phr">その表情のもたつきも、</span>
+      <span class="phr">原因は<span class="accent">「自律神経の乱れ」</span></span><span class="phr">かもしれません。</span></h1>
       <p class="hero-lead">
-        薬や強い刺激に頼らず、<strong>脳からの神経伝達エラー</strong>に着目した新しいアプローチで、<br>
-        美容と不調の根本原因へ。40〜60代の女性に選ばれる、完全予約制の美容整体・鍼灸サロンです。
+        <span class="phr">薬や強い刺激に頼らず、</span><span class="phr"><strong>脳からの神経伝達エラー</strong>に着目した</span><span class="phr">新しいアプローチで、</span><span class="phr">美容と不調の根本原因へ。</span><span class="phr">40〜60代の女性に選ばれる、</span><span class="phr">完全予約制の美容整体・鍼灸サロンです。</span>
       </p>
       <div class="hero-meta">
         <span class="tag" style="background:linear-gradient(135deg,#c98664,#b8985a);color:#fffdf8;border-color:transparent">2026.7.1 GRAND OPEN</span>
