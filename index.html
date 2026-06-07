@@ -233,7 +233,7 @@ ul{margin:0;padding:0;list-style:none}
 .profile{background:#fffdf8}
 .prof-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;margin-top:50px}
 .prof-img{aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#e9dcc6,#d9c4a3);position:relative;box-shadow:var(--shadow)}
-.prof-img img{width:100%;height:100%;object-fit:cover}
+.prof-img img{width:100%;height:100%;object-fit:cover;object-position:38% 32%}
 .prof-body .name-jp{font-family:var(--serif);font-size:30px;color:var(--brown-deep);letter-spacing:.06em}
 .prof-body .name-en{font-family:var(--latin);font-style:italic;color:var(--wood);letter-spacing:.18em;margin:8px 0 24px}
 .prof-body .role{display:inline-block;padding:6px 16px;background:rgba(184,152,90,.12);color:var(--wood-dark);border-radius:999px;font-size:12px;letter-spacing:.14em;margin-bottom:20px}
@@ -638,42 +638,7 @@ ul{margin:0;padding:0;list-style:none}
     </div>
     <div class="prof-grid">
       <div class="prof-img reveal">
-        <!-- 施術者ポートレート: AI生成画像に差し替えてください -->
-        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
-          <defs>
-            <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#f3ebde"/>
-              <stop offset="60%" stop-color="#e9dcc6"/>
-              <stop offset="100%" stop-color="#d9c4a3"/>
-            </linearGradient>
-            <radialGradient id="light" cx="35%" cy="25%" r="55%">
-              <stop offset="0%" stop-color="#fffdf8" stop-opacity=".7"/>
-              <stop offset="100%" stop-color="#fffdf8" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#8a6e52"/>
-              <stop offset="100%" stop-color="#5d4a37"/>
-            </linearGradient>
-            <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#e0c5a4"/>
-              <stop offset="100%" stop-color="#c9aa84"/>
-            </linearGradient>
-          </defs>
-          <rect width="400" height="500" fill="url(#bg)"/>
-          <rect width="400" height="500" fill="url(#light)"/>
-          <!-- 肩・上半身 -->
-          <path d="M 60 500 Q 60 380 130 340 Q 200 320 270 340 Q 340 380 340 500 Z" fill="url(#body)"/>
-          <!-- 首 -->
-          <path d="M 170 350 Q 170 320 200 320 Q 230 320 230 350 L 230 380 L 170 380 Z" fill="url(#skin)"/>
-          <!-- 顔 -->
-          <ellipse cx="200" cy="240" rx="78" ry="92" fill="url(#skin)"/>
-          <!-- 髪 -->
-          <path d="M 122 220 Q 130 140 200 130 Q 270 140 278 220 Q 270 175 245 165 Q 240 195 200 195 Q 160 195 155 165 Q 130 175 122 220 Z" fill="#3d342c"/>
-          <!-- アクセント線 -->
-          <line x1="60" y1="498" x2="340" y2="498" stroke="#b8985a" stroke-width=".5" opacity=".4"/>
-          <!-- ロゴ風モノグラム -->
-          <text x="200" y="475" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#fffdf8" opacity=".55" letter-spacing="6">ISAKA</text>
-        </svg>
+        <img src="assets/therapist.jpg" alt="いさか鍼灸・美容整体院 院長 井坂剛士">
       </div>
       <div class="prof-body reveal">
         <span class="role">院長 / 施術者</span>
