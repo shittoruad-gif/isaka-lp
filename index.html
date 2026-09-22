@@ -227,6 +227,11 @@ ul{margin:0;padding:0;list-style:none}
 .voice-card p{font-size:13px;line-height:1.95;color:#5d5042;margin-bottom:20px}
 .voice-meta{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid rgba(184,152,90,.18);font-size:12px;color:var(--wood-dark)}
 .voice-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#e9dcc6,#d9c4a3);flex-shrink:0}
+.gscore{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;background:var(--ivory);border:1px solid rgba(184,152,90,.3);border-radius:999px;padding:12px 26px;box-shadow:var(--shadow-soft)}
+.gscore-num{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--brown-deep);line-height:1}
+.gscore-stars{color:var(--gold);letter-spacing:.16em;font-size:16px}
+.gscore-cnt{font-size:12px;color:var(--wood-dark);letter-spacing:.06em}
+@media(max-width:480px){.gscore{padding:12px 18px;gap:8px}.gscore-num{font-size:24px}.gscore-cnt{font-size:11px}}
 @media(max-width:880px){.voice-grid{grid-template-columns:1fr}}
 
 /* ========== Profile (院長プロフィール) ========== */
@@ -606,30 +611,41 @@ ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div style="text-align:center" class="reveal">
       <span class="eyebrow">Voice</span>
-      <h2 class="h-title">プレオープン期に体験いただいた<br>モニター様のお声</h2>
-      <div class="divider"><span>MONITOR VOICES</span></div>
+      <h2 class="h-title">Googleクチコミで<br>★5.0をいただいています</h2>
+      <div class="divider"><span>GOOGLE REVIEWS</span></div>
+      <div class="gscore">
+        <span class="gscore-num">5.0</span>
+        <span class="gscore-stars">★★★★★</span>
+        <span class="gscore-cnt">Googleクチコミ 10件（2026年9月時点）</span>
+      </div>
     </div>
     <div class="voice-grid">
       <article class="voice-card reveal">
         <div class="voice-rating">★★★★★</div>
-        <h4>翌朝、鏡を見るのが少し楽しみになりました。</h4>
-        <p>強く押されないのに、終わったあとはお顔がすっきり。「ボキボキしないのに、こんなに違うんだ」と素直に驚きました。続けて通いたい施術です。</p>
-        <div class="voice-meta"><div class="voice-avatar"></div><span>50代女性／πテラピー美容整体 体験</span></div>
+        <h4>今では痛みを気にせず<br>眠れるようになりました。</h4>
+        <p>普段デスクワークが多く、肩と首の痛みで寝るのもつらい状態でしたが、施術後は体がとても楽になりました。<br>毎回その時の体の状態に合わせて丁寧に施術してくださるので、安心してお任せできます！</p>
+        <div class="voice-meta"><div class="voice-avatar"></div><span>侍 さん ／ Googleクチコミ</span></div>
       </article>
       <article class="voice-card reveal">
         <div class="voice-rating">★★★★★</div>
-        <h4>長年の頭の重さが、ふっと軽くなる感覚。</h4>
-        <p>頭痛とめまいに悩まされ続けていましたが、神経からのアプローチという発想が新鮮でした。施術後の身体の感覚に、これまでにない静けさがありました。</p>
-        <div class="voice-meta"><div class="voice-avatar"></div><span>40代女性／自律神経整体 体験</span></div>
+        <h4>眠れる時間も少しずつ長くなり、<br>歩くのも楽しくなってきてます。</h4>
+        <p>最初は少し緊張しましたが、こちらの話しを、きちんと聞いてくれて、痛みの原因、施術内容の説明もしっかりしてくれるので初めての方でも安心して受けれると思います。</p>
+        <div class="voice-meta"><div class="voice-avatar"></div><span>ゆっこさん ／ Googleクチコミ</span></div>
       </article>
       <article class="voice-card reveal">
         <div class="voice-rating">★★★★★</div>
-        <h4>カウンセリングだけで救われた気持ちに。</h4>
-        <p>不調の話を最後まで聴いてくださり、原因を一緒に考えてくれました。「頑張ってきた身体」と向き合ってもらえた感覚は、初めてかもしれません。</p>
-        <div class="voice-meta"><div class="voice-avatar"></div><span>60代女性／トータルコース体験</span></div>
+        <h4>体の可動域が広がり<br>びっくりしました。</h4>
+        <p>5、6年前にぎっくり腰をしてから動きづらい体に悩んでいたところ、Instagramで新しく出来たこちらの整体院を知りました。<br>三叉神経や体の動きづらい部分見極めて刺激を与えるという珍しい施術をしていただいて体の可動域が広がりびっくりしました。</p>
+        <div class="voice-meta"><div class="voice-avatar"></div><span>ひろあすと さん ／ Googleクチコミ</span></div>
       </article>
     </div>
-    <p style="text-align:center;margin-top:30px;font-size:12px;color:#8a7860;letter-spacing:.08em">※プレオープン期のモニター様による感想です。施術の感じ方には個人差があります。</p>
+    <p style="text-align:center;margin-top:30px;font-size:12px;color:#8a7860;line-height:1.9">
+      ※ Googleマップに投稿いただいた実際のクチコミを掲載しています（2026年9月時点）。<br>
+      ※ 施術の感じ方・変化の現れ方には個人差があります。
+    </p>
+    <div style="text-align:center;margin-top:20px">
+      <a class="btn btn-ghost" href="https://maps.google.com/?cid=2159648880478959422" target="_blank" rel="noopener">Googleでクチコミをすべて見る</a>
+    </div>
   </div>
 </section>
 
@@ -756,7 +772,7 @@ ul{margin:0;padding:0;list-style:none}
       <div class="access-info reveal">
         <dl>
           <div><dt>院名</dt><dd>井坂鍼灸整体院</dd></div>
-          <div><dt>住所</dt><dd>〒550-0022<br>大阪府大阪市西区本田2丁目1-5<br>グリーンヒルズ</dd></div>
+          <div><dt>住所</dt><dd>〒550-0022<br>大阪府大阪市西区本田2丁目1-5<br>グリーンヒルズ 101</dd></div>
           <div><dt>電話番号</dt><dd><a href="tel:07054802647" style="color:var(--wood-dark);font-weight:500;letter-spacing:.04em">070-5480-2647</a><br><small style="color:#8a7860">※ご予約は公式LINE・予約フォームもご利用いただけます</small></dd></div>
           <div><dt>営業時間</dt><dd>月〜土　10:00〜20:00<br>日・祝　10:00〜17:00</dd></div>
           <div><dt>休業日</dt><dd>不定休<br><small style="color:#8a7860">※最新の休業日は公式LINEにてご案内しております</small></dd></div>
@@ -774,7 +790,7 @@ ul{margin:0;padding:0;list-style:none}
         <p style="font-size:12px;color:#8a7860;margin-top:14px;line-height:1.8">※ 月〜土は 10:00–20:00、日・祝は 10:00–17:00 の受付です。<br>※ 休業日：不定休。<br>※ 最終受付は施術コースにより異なります。最新の空き状況・休業日は公式LINEにてご確認ください。</p>
       </div>
       <div class="access-map reveal">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.0397827755974!2d135.47962500000003!3d34.678945399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e651894a0509%3A0x77dace814141a5fe!2z44CSNTUwLTAwMjIg5aSn6Ziq5bqc5aSn6Ziq5biC6KW_5Yy65pys55Sw77yS5LiB55uu77yR4oiS77yVIOOCsOODquODvOODs-ODkuODq-OCug!5e0!3m2!1sja!2sjp!4v1778743819837!5m2!1sja!2sjp" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m3!3m2!1m1!4s2159648880478959422!3m1!1sja!5m1!1sja" title="井坂鍼灸整体院 の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -815,7 +831,7 @@ ul{margin:0;padding:0;list-style:none}
         <h5>Contact</h5>
         <ul>
           <li>〒550-0022</li>
-          <li>大阪府大阪市西区本田2-1-5<br>グリーンヒルズ</li>
+          <li>大阪府大阪市西区本田2-1-5<br>グリーンヒルズ 101</li>
           <li>TEL：<a href="tel:07054802647">070-5480-2647</a></li>
           <li>受付：月〜土 10:00–20:00</li>
           <li>日・祝 10:00–17:00 ／ 休業日：不定休</li>
