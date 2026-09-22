@@ -20,9 +20,11 @@
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;color:#3d342c;background:#faf6f0;line-height:1.85;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
-/* 日本語の不自然な改行：auto-phrase で日本語フレーズ単位の自動折返し（未対応ブラウザは line-break:strict にフォールバック） */
-body{word-break:auto-phrase;line-break:strict;text-wrap:pretty;overflow-wrap:break-word}
-h1,h2,h3,h4,.h-title,.cta h2{text-wrap:balance;line-break:strict;word-break:auto-phrase}
+/* 日本語の改行制御：BudouXで文節境界に wbr タグを埋め込み、keep-allで文節内は折り返さない（iOS Safari含む全ブラウザ対応）
+   テキストを編集したら tools/apply-linebreaks.py を再実行すること */
+body{word-break:keep-all;line-break:strict;text-wrap:pretty;overflow-wrap:anywhere}
+.nb{white-space:nowrap}
+h1,h2,h3,h4,.h-title,.cta h2{text-wrap:balance;line-break:strict;word-break:keep-all}
 /* 重要箇所のフレーズ単位ロック */
 .phr{display:inline-block}
 .phr{display:inline-block}
@@ -351,7 +353,7 @@ ul{margin:0;padding:0;list-style:none}
 <body>
 
 <!-- ========== New Open Band ========== -->
-<div class="newopen-band"><span class="band-en">— SINCE 2026.7 —</span><b>2026年7月開院 ／ Googleクチコミ ★5.0</b></div>
+<div class="newopen-band"><span class="band-en">— SINCE 2026.7 —</span><b>2026年7月開院 ／ Googleクチコミ ★<wbr>5.0</b></div>
 
 <!-- ========== Header ========== -->
 <header class="header" id="header">
@@ -384,12 +386,12 @@ ul{margin:0;padding:0;list-style:none}
     <div class="hero-copy">
       <span class="eyebrow">A New Era of Beauty &amp; Wellness</span>
       <h1><span class="phr">その不調も、</span><span class="phr">その表情のもたつきも、</span>
-      <span class="phr">原因は<span class="accent">「自律神経の乱れ」</span></span><span class="phr">かもしれません。</span></h1>
+      <span class="phr">原因は<span class="accent">「自律神経の<wbr><span class="nb">乱れ」</span></span></span><span class="phr">かもしれません。</span></h1>
       <p class="hero-lead">
-        <span class="phr">薬や強い刺激に頼らず、</span><span class="phr"><strong>脳からの神経伝達エラー</strong>に着目した</span><span class="phr">新しいアプローチで、</span><span class="phr">美容と不調の根本原因へ。</span><span class="phr">40〜60代の女性に選ばれる、</span><span class="phr">完全予約制の美容整体・鍼灸サロンです。</span>
+        <span class="phr">薬や<wbr>強い<wbr>刺激に<wbr>頼らず、</span><span class="phr"><strong>脳からの<wbr>神経伝達エラー</strong>に着目した</span><span class="phr">新しい<wbr>アプローチで、</span><span class="phr">美容と<wbr>不調の<wbr>根本原因へ。</span><span class="phr">40〜60代の<wbr>女性に<wbr>選ばれる、</span><span class="phr">完全予約制の<wbr>美容整体・鍼灸サロンです。</span>
       </p>
       <div class="hero-meta">
-        <span class="tag" style="background:linear-gradient(135deg,#c98664,#b8985a);color:#fffdf8;border-color:transparent">Googleクチコミ ★5.0</span>
+        <span class="tag" style="background:linear-gradient(135deg,#c98664,#b8985a);color:#fffdf8;border-color:transparent">Googleクチコミ ★<wbr>5.0</span>
         <span class="tag">施術歴 22年</span>
         <span class="tag">自律神経 × 美容整体</span>
         <span class="tag">完全予約制 / 1対1</span>
@@ -417,15 +419,15 @@ ul{margin:0;padding:0;list-style:none}
       <div class="divider"><span>FOR YOU</span></div>
     </div>
     <ul class="symp-list reveal">
-      <li class="symp-item">鏡を見るたびに、<strong>たるみ・左右差・輪郭のぼやけ</strong>が気になる</li>
-      <li class="symp-item">マッサージで<strong>肩こり・腰痛</strong>をほぐしても、数日で元に戻ってしまう</li>
-      <li class="symp-item">眠りが浅く、<strong>朝から疲れている感じ</strong>が抜けない</li>
-      <li class="symp-item">病院では「異常なし」。<strong>でも、原因のわからない不調</strong>が続いている</li>
-      <li class="symp-item">頭痛・めまい・動悸など、<strong>自律神経の乱れ</strong>を感じる</li>
-      <li class="symp-item">「もう年齢のせい」と、<strong>あきらめかけている</strong></li>
+      <li class="symp-item">鏡を<wbr>見るたびに、<strong>たるみ・左右差・輪郭のぼやけ</strong>が気になる</li>
+      <li class="symp-item">マッサージで<strong>肩こり・腰痛</strong>をほぐしても、<wbr>数日で<wbr>元に<wbr>戻ってしまう</li>
+      <li class="symp-item">眠りが<wbr>浅く、<strong>朝から<wbr>疲れている<wbr>感じ</strong>が抜けない</li>
+      <li class="symp-item">病院では<wbr><span class="nb">「異常なし」。</span><strong>でも、<wbr>原因のわからない<wbr>不調</strong>が続いている</li>
+      <li class="symp-item">頭痛・めまい・<wbr>動悸など、<strong>自律神経の<wbr>乱れ</strong>を感じる</li>
+      <li class="symp-item">「もう<wbr><span class="nb">年齢のせい」と、</span><strong>あきらめかけている</strong></li>
     </ul>
     <p class="symp-tail reveal">
-      ひとつでも当てはまる方は、どうかこのまま<br>
+      ひとつでも<wbr>当てはまる方は、<wbr>どうかこのまま<br>
       <em>少しだけ読み進めてみてください。</em>
     </p>
   </div>
@@ -435,27 +437,27 @@ ul{margin:0;padding:0;list-style:none}
 <section class="section problem">
   <div class="narrow reveal">
     <span class="eyebrow">The Real Issue</span>
-    <h2 class="h-title">「なんとなく不調」を放っておくと、<br>身体は静かに、<br>確実に変わっていきます。</h2>
+    <h2 class="h-title">「なんとなく<wbr><span class="nb">不調」を</span><wbr>放っておくと、<br>身体は<wbr>静かに、<br>確実に<wbr>変わっていきます。</h2>
     <p class="problem-quote">
-      凝り、痛み、眠れない、気持ちが沈む——。<br>
-      それらは身体からのサインを「後回し」にしたぶん、<br>
+      凝り、<wbr>痛み、<wbr>眠れない、<wbr>気持ちが<wbr>沈む——。<br>
+      それらは<wbr>身体からの<wbr>サインを<wbr><span class="nb">「後回し」にしたぶん、</span><br>
       <span class="big">深く・長く・複雑に</span>絡んでいきます。
     </p>
     <div class="problem-grid reveal">
       <div class="problem-card">
         <div class="icon"><span class="rn">I</span></div>
         <h4>慢性化</h4>
-        <p>不調が「いつもの自分」になり、<br>本来の心地よさを忘れてしまう。</p>
+        <p>不調が<wbr>「いつもの<wbr><span class="nb">自分」になり、</span><br>本来の<wbr>心地よさを<wbr>忘れてしまう。</p>
       </div>
       <div class="problem-card">
         <div class="icon"><span class="rn">II</span></div>
-        <h4>自律神経の乱れ</h4>
-        <p>眠りの質・気分・代謝まで連鎖し、<br>毎日の活力が少しずつ目減りする。</p>
+        <h4>自律神経の<wbr>乱れ</h4>
+        <p>眠りの<wbr>質・気分・代謝まで<wbr>連鎖し、<br>毎日の<wbr>活力が<wbr>少しずつ目減りする。</p>
       </div>
       <div class="problem-card">
         <div class="icon"><span class="rn">III</span></div>
-        <h4>見た目への影響</h4>
-        <p>姿勢・むくみ・表情のたるみとして<br>「なんとなくの疲れ顔」が定着する。</p>
+        <h4>見た<wbr>目への<wbr>影響</h4>
+        <p>姿勢・むくみ・表情のたるみとして<br>「なんとなくの<wbr><span class="nb">疲れ顔」が</span><wbr>定着する。</p>
       </div>
     </div>
   </div>
@@ -466,27 +468,27 @@ ul{margin:0;padding:0;list-style:none}
   <div class="narrow cause-inner reveal">
     <div style="text-align:center">
       <span class="eyebrow">The True Cause</span>
-      <h2 class="h-title">本当の原因は、<br>「揉んでほぐす場所」ではない。</h2>
+      <h2 class="h-title">本当の<wbr>原因は、<br>「揉んでほぐす場所」ではない。</h2>
       <div class="divider"><span>RE-THINK</span></div>
     </div>
     <div class="cause-flip">
       <div class="flip-row">
         <div class="flip-card bad">
-          <h5>これまでの常識</h5>
-          <p>凝った場所を強く揉む<br>歪んだ骨格をボキボキ矯正する</p>
+          <h5>これまでの<wbr>常識</h5>
+          <p>凝った<wbr>場所を<wbr>強く<wbr>揉む<br>歪んだ<wbr>骨格を<wbr>ボキボキ矯正する</p>
         </div>
         <div class="flip-arrow">→</div>
         <div class="flip-card good">
           <h5>本当の鍵</h5>
-          <p>痛みも歪みも、たるみも、<br><strong>「脳からの神経伝達エラー」</strong>として捉える</p>
+          <p>痛みも<wbr>歪みも、<wbr>たるみも、<br><strong>「脳からの<wbr><span class="nb">神経伝達エラー」</span></strong>として捉える</p>
         </div>
       </div>
     </div>
     <p class="cause-note">
-      身体は、脳からの神経信号によって筋肉・骨格・表情・自律神経すべてがコントロールされています。<br>
-      この<strong>神経の伝達がうまくいかなくなった状態</strong>こそが、<br>
-      慢性的な不調・お顔のたるみ・自律神経の乱れの<strong>本当の原因</strong>。<br>
-      だから当院は——<strong>「揉む・矯正する」のではなく、「神経を整えて、本来の機能を取り戻す」</strong>ことを大切にしています。
+      身体は、<wbr>脳からの<wbr>神経信号に<wbr>よって筋肉・骨格・表情・<wbr>自律神経すべてが<wbr>コントロールされています。<br>
+      この<strong>神経の<wbr>伝達がうまくいかなくなった<wbr>状態</strong>こそが、<br>
+      慢性的な<wbr>不調・<wbr>お顔のたるみ・自律神経の<wbr>乱れの<strong>本当の原因</strong>。<br>
+      だから当院は<wbr>——<strong>「揉む・矯正する」のではなく、<wbr>「神経を<wbr>整えて、<wbr>本来の<wbr>機能を<wbr><span class="nb">取り戻す」</span></strong>ことを大切にしています。
     </p>
   </div>
 </section>
@@ -496,7 +498,7 @@ ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div style="text-align:center" class="reveal">
       <span class="eyebrow">Our Approach</span>
-      <h2 class="h-title">自律神経の乱れを原因から整える<br>3つの専門アプローチ</h2>
+      <h2 class="h-title">自律神経の<wbr>乱れを<wbr>原因から<wbr>整える<br>3つの<wbr>専門アプローチ</h2>
       <p class="h-sub">— πTHERAPY &nbsp;×&nbsp; AUTONOMIC &nbsp;×&nbsp; STRUCTURE —</p>
     </div>
     <div class="sol-grid">
@@ -509,13 +511,13 @@ ul{margin:0;padding:0;list-style:none}
           <p class="read">For Your Beauty</p>
           <h3>πテラピー美容整体<small style="display:block;font-family:var(--latin);font-style:italic;font-size:11px;color:var(--wood);letter-spacing:.18em;font-weight:300;margin-top:4px">πTHERAPY</small></h3>
           <p>
-            日本と韓国、それぞれの<strong>美の技術を融合して生まれた肌再生プログラム</strong>。専用クリームと皮膚管理プログラムで、肌の外側と内側、そして表情筋へやさしくアプローチします。<br>
-            くすみ・たるみ・むくみ・小顔ライン、首から上の重さやストレスによる揺らぎまで。痛みはほとんどなく、「ストレスのない」心地よさの中で、明るい印象へと導きます。
+            日本と<wbr>韓国、<wbr>それぞれの<strong>美の<wbr>技術を<wbr>融合して<wbr>生まれた<wbr>肌再生<wbr>プログラム</strong>。<wbr>専用クリームと<wbr>皮膚管理<wbr>プログラムで、<wbr>肌の<wbr>外側と<wbr>内側、<wbr>そして表情筋へやさしく<wbr>アプローチします。<br>
+            くすみ・たるみ・むくみ・小顔ライン、<wbr>首から<wbr>上の<wbr>重さや<wbr>ストレスによる揺らぎまで。<wbr>痛みはほとんどなく、<wbr><span class="nb">「ストレスのない」</span><wbr>心地よさの<wbr>中で、<wbr>明るい印象へと<wbr>導きます。
           </p>
           <div class="feat">
             <span>肌再生・小顔</span>
             <span>むくみ・たるみ</span>
-            <span>痛みの少ない施術</span>
+            <span>痛みの<wbr>少ない<wbr>施術</span>
           </div>
         </div>
       </article>
@@ -528,8 +530,8 @@ ul{margin:0;padding:0;list-style:none}
           <p class="read">For Your Nerves</p>
           <h3>自律神経整体<small style="display:block;font-family:var(--latin);font-style:italic;font-size:11px;color:var(--wood);letter-spacing:.18em;font-weight:300;margin-top:4px">AUTONOMIC &nbsp;CARE</small></h3>
           <p>
-            身体の不調を「自律神経の乱れ」として捉え、神経のバランスそのものへ働きかける専門施術。<br>
-            眠りの浅さ・頭の重さ・原因のわからない不調に、優しく寄り添います。
+            身体の<wbr>不調を<wbr>「自律神経の<wbr><span class="nb">乱れ」として捉え、</span><wbr>神経の<wbr>バランスそのものへ働きかける<wbr>専門施術。<br>
+            眠りの<wbr>浅さ・頭の<wbr>重さ・<wbr>原因のわからない<wbr>不調に、<wbr>優しく<wbr>寄り<wbr>添います。
           </p>
           <div class="feat">
             <span>自律神経</span>
@@ -547,8 +549,8 @@ ul{margin:0;padding:0;list-style:none}
           <p class="read">For Your Body</p>
           <h3>骨格矯正<small style="display:block;font-family:var(--latin);font-style:italic;font-size:11px;color:var(--wood);letter-spacing:.18em;font-weight:300;margin-top:4px">STRUCTURE &nbsp;CARE</small></h3>
           <p>
-            長年の<strong>肩こり・腰痛</strong>の背景にある骨格バランスの崩れに着目。<br>
-            ボキボキしない優しい矯正で、身体が本来あるべき位置へ戻る土台づくりをサポートします。
+            長年の<strong>肩こり・腰痛</strong>の背景にある骨格バランスの<wbr>崩れに<wbr>着目。<br>
+            ボキボキしない<wbr>優しい<wbr>矯正で、<wbr>身体が<wbr>本来あるべき位置へ<wbr>戻る<wbr>土台づくりを<wbr>サポートします。
           </p>
           <div class="feat">
             <span>肩こり</span>
@@ -565,27 +567,27 @@ ul{margin:0;padding:0;list-style:none}
 <section class="section benefit">
   <div class="narrow reveal">
     <span class="eyebrow">Your New Everyday</span>
-    <h2 class="h-title">施術のあとに、<br>取り戻したい「日常」があります。</h2>
+    <h2 class="h-title">施術のあとに、<br>取り戻したい<wbr><span class="nb">「日常」があります。</span></h2>
     <div class="benefit-illust">
       <div class="ben-card">
         <svg class="ben-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="8"/><path d="M24 6v4M24 38v4M6 24h4M38 24h4M11 11l3 3M34 34l3 3M37 11l-3 3M14 34l-3 3"/></svg>
-        <h4>朝、目覚ましの前に<br>自然と目が覚める</h4>
+        <h4>朝、<wbr>目覚ましの<wbr>前に<br>自然と<wbr>目が<wbr>覚める</h4>
       </div>
       <div class="ben-card">
         <svg class="ben-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 40c0-12 8-22 18-26-2 14-8 22-18 26zM24 40c0-10-6-18-14-22 2 12 6 18 14 22zM24 40v-12"/></svg>
-        <h4>呼吸が深くなり<br>気持ちに余白が戻る</h4>
+        <h4>呼吸が<wbr>深くなり<br>気持ちに<wbr>余白が<wbr>戻る</h4>
       </div>
       <div class="ben-card">
         <svg class="ben-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="6" width="20" height="30" rx="10"/><path d="M14 32h20M20 40h8"/></svg>
-        <h4>鏡の中の自分に<br>少し優しくなれる</h4>
+        <h4>鏡の<wbr>中の<wbr>自分に<br>少し<wbr>優しくなれる</h4>
       </div>
     </div>
     <p class="ben-quote">
-      私たちが目指すのは、「痛みを消すこと」ではなく、<br>
-      <strong>「あなたが、あなたらしく過ごせる日常」</strong>そのものです。
+      私たちが<wbr>目指すのは、<wbr>「痛みを<wbr><span class="nb">消すこと」ではなく、</span><br>
+      <strong>「あなたが、<wbr>あなたらしく<wbr>過ごせる<wbr><span class="nb">日常」</span></strong>そのものです。
     </p>
     <div style="margin-top:24px">
-      <a class="btn btn-primary" href="#cta-final">この日常を取り戻す</a>
+      <a class="btn btn-primary" href="#cta-final">この日常を<wbr>取り戻す</a>
     </div>
   </div>
 </section>
@@ -595,15 +597,15 @@ ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div style="text-align:center" class="reveal">
       <span class="eyebrow">Why We Are Chosen</span>
-      <h2 class="h-title">井坂鍼灸整体院が<br>選ばれる5つの理由</h2>
+      <h2 class="h-title">井坂鍼灸整体院が<br>選ばれる<wbr>5つの<wbr>理由</h2>
       <div class="divider"><span>OUR PROMISE</span></div>
     </div>
     <div class="feat-list">
-      <div class="feat-row reveal"><div class="feat-num">01</div><div><h3>自律神経の乱れを「原因」からアプローチ</h3><p>表面的な施術ではなく、脳からの神経伝達という根本原因に着目。だから施術後の変化が、ご自宅に帰ってからも続きやすいのです。</p></div></div>
-      <div class="feat-row reveal"><div class="feat-num">02</div><div><h3>美容と不調ケアを、同じ視点で同時に</h3><p>お顔のたるみも、長年の不調も、原因は同じ「自律神経の乱れ」と「ホルモンバランスの乱れ」にあると考えます。<br>πテラピー美容整体と自律神経整体を一度にご提供できる、新しいサロンです。</p></div></div>
-      <div class="feat-row reveal"><div class="feat-num">03</div><div><h3>40〜60代の女性に選ばれる、落ち着いた空間</h3><p>慌ただしいエステや治療院とは違う、静かな個室。お一人の時間を大切にされたい方、人目を気にしたくない方に安心してお過ごしいただけます。</p></div></div>
-      <div class="feat-row reveal"><div class="feat-num">04</div><div><h3>完全予約制・1対1の丁寧なカウンセリング</h3><p>「どこが気になるか」だけでなく、生活リズム・睡眠・心の状態まで丁寧に伺います。原因を一緒に紐解くところから施術が始まります。</p></div></div>
-      <div class="feat-row reveal"><div class="feat-num">05</div><div><h3>痛くない・ボキボキしない、優しい施術</h3><p>強い圧や急な矯正は一切ありません。神経への繊細なアプローチだからこそ、施術中に眠ってしまわれる方も多くいらっしゃいます。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">01</div><div><h3>自律神経の<wbr>乱れを<wbr><span class="nb">「原因」から</span><wbr>アプローチ</h3><p>表面的な<wbr>施術ではなく、<wbr>脳からの<wbr>神経伝達という根本原因に<wbr>着目。<wbr>だから施術後の<wbr>変化が、<wbr>ご自宅に<wbr>帰ってからも<wbr>続きやすいのです。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">02</div><div><h3>美容と<wbr>不調ケアを、<wbr>同じ<wbr>視点で<wbr>同時に</h3><p>お顔のたるみも、<wbr>長年の<wbr>不調も、<wbr>原因は<wbr>同じ<wbr>「自律神経の<wbr><span class="nb">乱れ」と</span><wbr>「ホルモンバランスの<wbr><span class="nb">乱れ」にあると考えます。</span><br>πテラピー美容整体と<wbr>自律神経整体を<wbr>一度にご提供できる、<wbr>新しい<wbr>サロンです。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">03</div><div><h3>40〜60代の<wbr>女性に<wbr>選ばれる、<wbr>落ち着いた<wbr>空間</h3><p>慌ただしい<wbr>エステや<wbr>治療院とは<wbr>違う、<wbr>静かな<wbr>個室。<wbr>お一人の<wbr>時間を<wbr>大切にされたい方、<wbr>人目を<wbr>気にしたくない<wbr>方に<wbr>安心してお過ごしいただけます。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">04</div><div><h3>完全予約制・1対1の<wbr>丁寧な<wbr>カウンセリング</h3><p>「どこが<wbr><span class="nb">気になるか」だけでなく、</span><wbr>生活リズム・睡眠・心の<wbr>状態まで<wbr>丁寧に<wbr>伺います。<wbr>原因を<wbr>一緒に<wbr>紐解くところから<wbr>施術が<wbr>始まります。</p></div></div>
+      <div class="feat-row reveal"><div class="feat-num">05</div><div><h3>痛くない・ボキボキしない、<wbr>優しい<wbr>施術</h3><p>強い<wbr>圧や<wbr>急な<wbr>矯正は<wbr>一切ありません。<wbr>神経への<wbr>繊細な<wbr>アプローチだからこそ、<wbr>施術中に<wbr>眠ってしまわれる<wbr>方も<wbr>多くいらっしゃいます。</p></div></div>
     </div>
   </div>
 </section>
@@ -613,40 +615,40 @@ ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div style="text-align:center" class="reveal">
       <span class="eyebrow">Voice</span>
-      <h2 class="h-title">Googleクチコミで<br>★5.0をいただいています</h2>
+      <h2 class="h-title">Googleクチコミで<br>★<wbr>5.0をいただいています</h2>
       <div class="divider"><span>GOOGLE REVIEWS</span></div>
       <div class="gscore">
         <span class="gscore-num">5.0</span>
         <span class="gscore-stars">★★★★★</span>
-        <span class="gscore-cnt">Googleクチコミ 10件（2026年9月時点）</span>
+        <span class="gscore-cnt">Googleクチコミ 10件<wbr><span class="nb">（2026年9月時点）</span></span>
       </div>
     </div>
     <div class="voice-grid">
       <article class="voice-card reveal">
         <div class="voice-rating">★★★★★</div>
-        <h4>今では痛みを気にせず<br>眠れるようになりました。</h4>
-        <p>普段デスクワークが多く、肩と首の痛みで寝るのもつらい状態でしたが、施術後は体がとても楽になりました。<br>毎回その時の体の状態に合わせて丁寧に施術してくださるので、安心してお任せできます！</p>
-        <div class="voice-meta"><div class="voice-avatar"></div><span>侍 さん ／ Googleクチコミ</span></div>
+        <h4>今では<wbr>痛みを<wbr>気にせず<br>眠れるようになりました。</h4>
+        <p>普段デスクワークが<wbr>多く、<wbr>肩と<wbr>首の<wbr>痛みで<wbr>寝るのもつらい状態でしたが、<wbr>施術後は<wbr>体がとても楽になりました。<br>毎回<wbr>その時の<wbr>体の<wbr>状態に<wbr>合わせて<wbr>丁寧に<wbr>施術してくださるので、<wbr>安心してお任せできます！</p>
+        <div class="voice-meta"><div class="voice-avatar"></div><span>侍 さん<wbr> ／ Googleクチコミ</span></div>
       </article>
       <article class="voice-card reveal">
         <div class="voice-rating">★★★★★</div>
-        <h4>眠れる時間も少しずつ長くなり、<br>歩くのも楽しくなってきてます。</h4>
-        <p>最初は少し緊張しましたが、こちらの話しを、きちんと聞いてくれて、痛みの原因、施術内容の説明もしっかりしてくれるので初めての方でも安心して受けれると思います。</p>
-        <div class="voice-meta"><div class="voice-avatar"></div><span>ゆっこさん ／ Googleクチコミ</span></div>
+        <h4>眠れる<wbr>時間も<wbr>少しずつ長くなり、<br>歩くのも<wbr>楽しくなってきてます。</h4>
+        <p>最初は<wbr>少し<wbr>緊張しましたが、<wbr>こちらの<wbr>話しを、<wbr>きちんと<wbr>聞いてくれて、<wbr>痛みの<wbr>原因、<wbr>施術内容の<wbr>説明もしっかりしてくれるので<wbr>初めての<wbr>方でも<wbr>安心して<wbr>受けれると<wbr>思います。</p>
+        <div class="voice-meta"><div class="voice-avatar"></div><span>ゆっこさん<wbr> ／ Googleクチコミ</span></div>
       </article>
       <article class="voice-card reveal">
         <div class="voice-rating">★★★★★</div>
-        <h4>体の可動域が広がり<br>びっくりしました。</h4>
-        <p>5、6年前にぎっくり腰をしてから動きづらい体に悩んでいたところ、Instagramで新しく出来たこちらの整体院を知りました。<br>三叉神経や体の動きづらい部分見極めて刺激を与えるという珍しい施術をしていただいて体の可動域が広がりびっくりしました。</p>
-        <div class="voice-meta"><div class="voice-avatar"></div><span>ひろあすと さん ／ Googleクチコミ</span></div>
+        <h4>体の<wbr>可動域が<wbr>広がり<br>びっくりしました。</h4>
+        <p>5、<wbr>6年前にぎっくり腰をしてから<wbr>動きづらい体に<wbr>悩んでいたところ、<wbr>Instagramで<wbr>新しく<wbr>出来たこちらの<wbr>整体院を<wbr>知りました。<br>三叉神経や<wbr>体の<wbr>動きづらい<wbr>部分<wbr>見極めて<wbr>刺激を<wbr>与えるという珍しい<wbr>施術をしていただいて<wbr>体の<wbr>可動域が<wbr>広がりびっくりしました。</p>
+        <div class="voice-meta"><div class="voice-avatar"></div><span>ひろあすと<wbr> さん<wbr> ／ Googleクチコミ</span></div>
       </article>
     </div>
     <p style="text-align:center;margin-top:30px;font-size:12px;color:#8a7860;line-height:1.9">
-      ※ Googleマップに投稿いただいた実際のクチコミを掲載しています（2026年9月時点）。<br>
-      ※ 施術の感じ方・変化の現れ方には個人差があります。
+      ※ Googleマップに<wbr>投稿いただいた<wbr>実際の<wbr>クチコミを<wbr>掲載しています<wbr><span class="nb">（2026年9月時点）。</span><br>
+      ※ 施術の<wbr>感じ方・変化の<wbr>現れ方には<wbr>個人差があります。
     </p>
     <div style="text-align:center;margin-top:20px">
-      <a class="btn btn-ghost" href="https://maps.google.com/?cid=2159648880478959422" target="_blank" rel="noopener">Googleでクチコミをすべて見る</a>
+      <a class="btn btn-ghost" href="https://maps.google.com/?cid=2159648880478959422" target="_blank" rel="noopener">Googleで<wbr>クチコミをすべて見る</a>
     </div>
   </div>
 </section>
@@ -666,15 +668,15 @@ ul{margin:0;padding:0;list-style:none}
         <span class="role">院長 / 施術者</span>
         <h3 class="name-jp">井坂 剛士</h3>
         <p class="name-en">ISAKA Takeshi</p>
-        <p>「強く揉めば良くなる」と信じて、押して・揉んで・矯正してきた日々がありました。でも、ある時気づいたのです——身体の不調も、お顔のたるみも、そのほとんどは<strong>「脳からの神経伝達エラー」</strong>に行き着くのだと。</p>
-        <p>それからは、日本と韓国の美の技術を融合した美容整体「πテラピー」、自律神経整体、そして骨格矯正を組み合わせ、<strong>「優しいのに、心地よい」</strong>施術を追求してきました。施術歴は22年になります。</p>
-        <p>40〜60代の女性が「もう年齢のせい」とあきらめてしまう前に。あなたの身体の声を、一緒に聴かせてください。</p>
+        <p>「強く<wbr>揉めば<wbr><span class="nb">良くなる」と</span><wbr>信じて、<wbr>押して・<wbr>揉んで・<wbr>矯正してきた<wbr>日々がありました。<wbr>でも、<wbr>ある<wbr>時気づいたのです——身体の<wbr>不調も、<wbr>お顔のたるみも、<wbr>そのほとんどは<strong>「脳からの<wbr><span class="nb">神経伝達エラー」</span></strong>に行き着くのだと。</p>
+        <p>それからは、<wbr>日本と<wbr>韓国の<wbr>美の<wbr>技術を<wbr>融合した<wbr>美容整体<wbr><span class="nb">「πテラピー」、</span><wbr>自律神経整体、<wbr>そして骨格矯正を<wbr>組み合わせ、<strong>「優しいのに、<wbr><span class="nb">心地よい」</span></strong>施術を<wbr>追求してきました。<wbr>施術歴は<wbr>22年になります。</p>
+        <p>40〜60代の<wbr>女性が<wbr>「もう<wbr>年齢のせい」とあきらめてしまう<wbr>前に。<wbr>あなたの身体の<wbr>声を、<wbr>一緒に<wbr>聴かせてください。</p>
         <div class="prof-creds">
           <h5>RESUME</h5>
           <ul>
-            <li>柔道整復師（国家資格）</li>
-            <li>はり師（国家資格）</li>
-            <li>きゅう師（国家資格）</li>
+            <li>柔道整復師<wbr><span class="nb">（国家資格）</span></li>
+            <li>はり師<wbr><span class="nb">（国家資格）</span></li>
+            <li>きゅう師<wbr><span class="nb">（国家資格）</span></li>
             <li>πテラピー美容整体 施術者</li>
             <li>自律神経整体 施術者</li>
             <li>施術歴 22年</li>
@@ -690,15 +692,15 @@ ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div style="text-align:center" class="reveal">
       <span class="eyebrow">Flow</span>
-      <h2 class="h-title">ご来院から、お帰りまで</h2>
-      <p class="h-sub">— 初めての方も、安心してお越しください —</p>
+      <h2 class="h-title">ご来院から、<wbr>お帰りまで</h2>
+      <p class="h-sub">— 初めての<wbr>方も、<wbr>安心してお越しください<wbr> —</p>
     </div>
     <div class="flow-list">
-      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">01</span></div><div class="flow-body"><h4>ご予約・お問い合わせ</h4><p>公式LINEまたは予約フォームから。「初めて」の旨を一言いただけるとスムーズです。</p></div></div>
-      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">02</span></div><div class="flow-body"><h4>カウンセリング（約20分）</h4><p>お身体のお悩みはもちろん、生活リズムや気分の波まで丁寧に伺います。ここがいちばん大切な時間です。</p></div></div>
-      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">03</span></div><div class="flow-body"><h4>姿勢・骨格チェック</h4><p>立ち姿・歩き方・呼吸の深さを確認し、その日の身体に合わせた施術プランをご提案します。</p></div></div>
-      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">04</span></div><div class="flow-body"><h4>施術</h4><p>πテラピー美容整体・自律神経整体・骨格矯正などを、その日の状態に合わせて。身体と自律神経の両方へ静かにアプローチします。多くの方が途中で眠ってしまう時間です。</p></div></div>
-      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">05</span></div><div class="flow-body"><h4>アフターアドバイス</h4><p>その日の身体に合わせたセルフケアと、無理のない通院ペースをお伝えします。押し売りは一切ありません。</p></div></div>
+      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">01</span></div><div class="flow-body"><h4>ご予約・<wbr>お問い合わせ</h4><p>公式LINEまたは<wbr>予約フォームから。<wbr><span class="nb">「初めて」の</span><wbr>旨を<wbr>一言いただけると<wbr>スムーズです。</p></div></div>
+      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">02</span></div><div class="flow-body"><h4>カウンセリング<wbr><span class="nb">（約20分）</span></h4><p>お身体のお悩みはもちろん、<wbr>生活リズムや<wbr>気分の<wbr>波まで<wbr>丁寧に<wbr>伺います。<wbr>ここがいちばん<wbr>大切な<wbr>時間です。</p></div></div>
+      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">03</span></div><div class="flow-body"><h4>姿勢・骨格チェック</h4><p>立ち姿・<wbr>歩き方・呼吸の<wbr>深さを<wbr>確認し、<wbr>その日の<wbr>身体に<wbr>合わせた<wbr>施術プランをご提案します。</p></div></div>
+      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">04</span></div><div class="flow-body"><h4>施術</h4><p>πテラピー美容整体・<wbr>自律神経整体・骨格矯正などを、<wbr>その日の<wbr>状態に<wbr>合わせて。<wbr>身体と<wbr>自律神経の<wbr>両方へ<wbr>静かに<wbr>アプローチします。<wbr>多くの<wbr>方が<wbr>途中で<wbr>眠ってしまう<wbr>時間です。</p></div></div>
+      <div class="flow-item reveal"><div class="flow-step"><span class="lab">STEP</span><span class="num">05</span></div><div class="flow-body"><h4>アフターアドバイス</h4><p>その日の<wbr>身体に<wbr>合わせた<wbr>セルフケアと、<wbr>無理のない通院ペースを<wbr>お伝えします。<wbr>押し売りは<wbr>一切ありません。</p></div></div>
     </div>
   </div>
 </section>
@@ -716,28 +718,28 @@ ul{margin:0;padding:0;list-style:none}
         <span style="position:absolute;top:-12px;right:20px;background:var(--gold);color:#fff;font-size:11px;padding:5px 14px;border-radius:999px;letter-spacing:.14em">看板メニュー</span>
         <span class="badge">— Beauty / Most Popular —</span>
         <h4>πテラピー美容整体</h4>
-        <p>当院の看板メニュー。<br>日本と韓国の美の技術を融合した肌再生プログラムで、専用クリームと皮膚管理により肌の内外・表情筋へアプローチ。<br>くすみ・たるみ・むくみ・小顔ラインが気になる方へ、痛みの少ない心地よい時間を。</p>
+        <p>当院の<wbr>看板メニュー。<br>日本と<wbr>韓国の<wbr>美の<wbr>技術を<wbr>融合した<wbr>肌再生<wbr>プログラムで、<wbr>専用クリームと<wbr>皮膚管理により肌の<wbr>内外・表情筋へ<wbr>アプローチ。<br>くすみ・たるみ・むくみ・小顔ラインが<wbr>気になる方へ、<wbr>痛みの<wbr>少ない<wbr>心地よい<wbr>時間を。</p>
         <div class="price"><span class="lbl">初回</span><span class="amt">8,800円</span><span class="tax">（税込）</span></div>
-        <p class="time">所要時間：約 60〜90 分（初回はカウンセリングを含みます）</p>
+        <p class="time">所要時間：約 60〜90 分<wbr>（初回は<wbr>カウンセリングを<wbr><span class="nb">含みます）</span></p>
       </div>
       <div class="menu-card reveal">
         <span class="badge">— Autonomic —</span>
         <h4>自律神経整体</h4>
-        <p>自律神経の乱れに直接アプローチする専門施術。眠りの浅さ・頭の重さ・原因のわからない不調に寄り添う、優しい根本ケアです。</p>
+        <p>自律神経の<wbr>乱れに<wbr>直接アプローチする<wbr>専門施術。<wbr>眠りの<wbr>浅さ・頭の<wbr>重さ・<wbr>原因のわからない<wbr>不調に<wbr>寄り添う、<wbr>優しい<wbr>根本ケアです。</p>
         <div class="price"><span class="lbl">初回</span><span class="amt">2,200円</span><span class="tax">（税込）</span></div>
         <p class="time">所要時間：約 30 分</p>
       </div>
       <div class="menu-card reveal">
         <span class="badge">— Structure —</span>
-        <h4>骨格矯正（肩こり・腰痛）</h4>
-        <p>長年の肩こり・腰痛の背景にある骨格バランスの崩れを、ボキボキしない優しい矯正で整えます。デスクワーク・立ち仕事の方に。</p>
+        <h4>骨格矯正<wbr><span class="nb">（肩こり・腰痛）</span></h4>
+        <p>長年の<wbr>肩こり・腰痛の<wbr>背景にある骨格バランスの<wbr>崩れを、<wbr>ボキボキしない<wbr>優しい<wbr>矯正で<wbr>整えます。<wbr>デスクワーク・立ち仕事の<wbr>方に。</p>
         <div class="price"><span class="lbl">初回</span><span class="amt">2,200円</span><span class="tax">（税込）</span></div>
         <p class="time">所要時間：約 30 分</p>
       </div>
     </div>
     <p class="menu-note">
-      ※ 表示価格はすべて初回料金（税込）です。<br>
-      2回目以降の料金やコースの詳細は、ご予約時または公式LINEにてご案内しております。<br>
+      ※ 表示価格はすべて初回料金<wbr><span class="nb">（税込）です。</span><br>
+      2回目以降の<wbr>料金や<wbr>コースの<wbr>詳細は、<wbr>ご予約時または<wbr>公式LINEにて<wbr>ご案内しております。<br>
       お気軽にお問い合わせください。
     </p>
   </div>
@@ -748,17 +750,17 @@ ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div style="text-align:center" class="reveal">
       <span class="eyebrow">Q &amp; A</span>
-      <h2 class="h-title">ご予約の前に、よくある質問</h2>
+      <h2 class="h-title">ご予約の<wbr>前に、<wbr>よくある<wbr>質問</h2>
       <div class="divider"><span>BEFORE YOU BOOK</span></div>
     </div>
     <div class="qa-list">
-      <div class="qa-item"><button class="qa-q">本当に痛くないですか？ボキボキされませんか？</button><div class="qa-a"><div class="qa-a-inner">はい、ご安心ください。当院ではボキボキする矯正・強い圧でのマッサージは一切行いません。神経への繊細なアプローチが軸ですので、ほとんどの方が「触れているだけ？」と驚かれます。骨格矯正も、痛みの少ない優しい方法で行いますのでご安心ください。</div></div></div>
-      <div class="qa-item"><button class="qa-q">美容目的だけでも通えますか？</button><div class="qa-a"><div class="qa-a-inner">もちろんです。お顔のたるみや左右差、フェイスラインのもたつきが気になる方には、看板メニューの「πテラピー美容整体」を中心にご案内しています。お身体の不調もあわせて整えたい方には、自律神経整体や骨格矯正との組み合わせもご提案しています。</div></div></div>
-      <div class="qa-item"><button class="qa-q">どのくらいの頻度で通えばいいですか？</button><div class="qa-a"><div class="qa-a-inner">お身体の状態によって異なります。初回のカウンセリングで、無理のない通院ペースをご提案します。多くの方は、1週間に1〜2回、整ってきたら月2〜3回のメンテナンスへ移行されています。</div></div></div>
-      <div class="qa-item"><button class="qa-q">妊娠中・産後でも受けられますか？</button><div class="qa-a"><div class="qa-a-inner">妊娠中の方は、安定期以降であれば体勢を工夫してご対応可能です。産後の方には、骨盤周りと自律神経の両方に配慮した優しいコースをご用意しています。ご予約時に必ずお知らせください。</div></div></div>
-      <div class="qa-item"><button class="qa-q">男性でも予約できますか？</button><div class="qa-a"><div class="qa-a-inner">もちろんご予約いただけます。慢性的な肩こり・腰痛でお悩みの男性の方も多くいらっしゃいます。完全予約制ですので、人目を気にせずお越しいただけます。</div></div></div>
-      <div class="qa-item"><button class="qa-q">施術中に眠ってしまっても大丈夫ですか？</button><div class="qa-a"><div class="qa-a-inner">むしろ大歓迎です。眠りに落ちられるのは、身体と心が安心している証拠。そのままお休みください。終わったタイミングでそっとお声がけします。</div></div></div>
-      <div class="qa-item"><button class="qa-q">服装はどうすればいいですか？</button><div class="qa-a"><div class="qa-a-inner">普段着のままで結構です。必要に応じて、肌当たりの良いリネンの施術着をご用意していますので、お気軽にお越しください。</div></div></div>
+      <div class="qa-item"><button class="qa-q">本当に<wbr>痛くないですか？<wbr>ボキボキされませんか？</button><div class="qa-a"><div class="qa-a-inner">はい、<wbr>ご安心ください。<wbr>当院では<wbr>ボキボキする<wbr>矯正・強い圧での<wbr>マッサージは<wbr>一切<wbr>行いません。<wbr>神経への<wbr>繊細な<wbr>アプローチが<wbr>軸ですので、<wbr>ほとんどの<wbr>方が<wbr><span class="nb">「触れているだけ？」と</span><wbr>驚かれます。<wbr>骨格矯正も、<wbr>痛みの<wbr>少ない<wbr>優しい<wbr>方法で<wbr>行いますのでご安心ください。</div></div></div>
+      <div class="qa-item"><button class="qa-q">美容目的だけでも<wbr>通えますか？</button><div class="qa-a"><div class="qa-a-inner">もちろんです。<wbr>お顔のたるみや<wbr>左右差、<wbr>フェイスラインのもたつきが<wbr>気になる方には、<wbr>看板メニューの<wbr><span class="nb">「πテラピー美容整体」を</span><wbr>中心にご案内しています。<wbr>お身体の<wbr>不調もあわせて<wbr>整えたい方には、<wbr>自律神経整体や<wbr>骨格矯正との<wbr>組み合わせもご提案しています。</div></div></div>
+      <div class="qa-item"><button class="qa-q">どのくらいの<wbr>頻度で<wbr>通えばいいですか？</button><div class="qa-a"><div class="qa-a-inner">お身体の<wbr>状態によって異なります。<wbr>初回の<wbr>カウンセリングで、<wbr>無理のない通院ペースを<wbr>ご提案します。<wbr>多くの<wbr>方は、<wbr>1週間に<wbr>1〜2回、<wbr>整ってきたら<wbr>月2〜3回の<wbr>メンテナンスへ<wbr>移行されています。</div></div></div>
+      <div class="qa-item"><button class="qa-q">妊娠中・産後でも<wbr>受けられますか？</button><div class="qa-a"><div class="qa-a-inner">妊娠中の<wbr>方は、<wbr>安定期以降であれば<wbr>体勢を<wbr>工夫してご対応可能です。<wbr>産後の<wbr>方には、<wbr>骨盤周りと<wbr>自律神経の<wbr>両方に<wbr>配慮した<wbr>優しい<wbr>コースをご用意しています。<wbr>ご予約時に<wbr>必ずお知らせください。</div></div></div>
+      <div class="qa-item"><button class="qa-q">男性でも<wbr>予約できますか？</button><div class="qa-a"><div class="qa-a-inner">もちろんご予約いただけます。<wbr>慢性的な<wbr>肩こり・腰痛でお悩みの<wbr>男性の<wbr>方も<wbr>多くいらっしゃいます。<wbr>完全予約制ですので、<wbr>人目を<wbr>気にせずお越しいただけます。</div></div></div>
+      <div class="qa-item"><button class="qa-q">施術中に<wbr>眠ってしまっても<wbr>大丈夫ですか？</button><div class="qa-a"><div class="qa-a-inner">むしろ大歓迎です。<wbr>眠りに<wbr>落ちられるのは、<wbr>身体と<wbr>心が<wbr>安心している<wbr>証拠。<wbr>そのままお休みください。<wbr>終わった<wbr>タイミングで<wbr>そっとお声がけします。</div></div></div>
+      <div class="qa-item"><button class="qa-q">服装はどうすればいいですか？</button><div class="qa-a"><div class="qa-a-inner">普段着のままで結構です。<wbr>必要に<wbr>応じて、<wbr>肌当たりの<wbr>良いリネンの<wbr>施術着をご用意していますので、<wbr>お気軽にお越しください。</div></div></div>
     </div>
   </div>
 </section>
@@ -775,11 +777,11 @@ ul{margin:0;padding:0;list-style:none}
         <dl>
           <div><dt>院名</dt><dd>井坂鍼灸整体院</dd></div>
           <div><dt>住所</dt><dd>〒550-0022<br>大阪府大阪市西区本田2丁目1-5<br>グリーンヒルズ 101</dd></div>
-          <div><dt>電話番号</dt><dd><a href="tel:07054802647" style="color:var(--wood-dark);font-weight:500;letter-spacing:.04em">070-5480-2647</a><br><small style="color:#8a7860">※ご予約は公式LINE・予約フォームもご利用いただけます</small></dd></div>
+          <div><dt>電話番号</dt><dd><a href="tel:07054802647" style="color:var(--wood-dark);font-weight:500;letter-spacing:.04em">070-5480-2647</a><br><small style="color:#8a7860">※ご予約は<wbr>公式LINE・予約フォームも<wbr>ご利用いただけます</small></dd></div>
           <div><dt>営業時間</dt><dd>月〜土　10:00〜20:00<br>日・祝　10:00〜17:00</dd></div>
-          <div><dt>休業日</dt><dd>不定休<br><small style="color:#8a7860">※最新の休業日は公式LINEにてご案内しております</small></dd></div>
-          <div><dt>アクセス</dt><dd>大阪メトロ中央線・千日前線「阿波座駅」より徒歩約10分<br>大阪メトロ中央線「九条駅」より徒歩約10分</dd></div>
-          <div><dt>駐車場</dt><dd>近隣コインパーキングをご利用ください</dd></div>
+          <div><dt>休業日</dt><dd>不定休<br><small style="color:#8a7860">※最新の<wbr>休業日は<wbr>公式LINEにて<wbr>ご案内しております</small></dd></div>
+          <div><dt>アクセス</dt><dd>大阪メトロ中央線・<wbr>千日前線<wbr><span class="nb">「阿波座駅」より</span><wbr>徒歩約10分<br>大阪メトロ中央線<wbr><span class="nb">「九条駅」より</span><wbr>徒歩約10分</dd></div>
+          <div><dt>駐車場</dt><dd>近隣コインパーキングを<wbr>ご利用ください</dd></div>
           <div><dt>予約方法</dt><dd>公式LINE・予約フォーム<br>（完全予約制）</dd></div>
         </dl>
         <table class="schedule">
@@ -789,7 +791,7 @@ ul{margin:0;padding:0;list-style:none}
             <tr><th>10:00–17:00</th><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>○</td></tr>
           </tbody>
         </table>
-        <p style="font-size:12px;color:#8a7860;margin-top:14px;line-height:1.8">※ 月〜土は 10:00–20:00、日・祝は 10:00–17:00 の受付です。<br>※ 休業日：不定休。<br>※ 最終受付は施術コースにより異なります。最新の空き状況・休業日は公式LINEにてご確認ください。</p>
+        <p style="font-size:12px;color:#8a7860;margin-top:14px;line-height:1.8">※ 月〜土は<wbr> 10:00–20:00、<wbr>日・祝は<wbr> 10:00–17:00 の<wbr>受付です。<br>※ 休業日：不定休。<br>※ 最終受付は<wbr>施術コースにより異なります。<wbr>最新の<wbr>空き状況・休業日は<wbr>公式LINEにてご確認ください。</p>
       </div>
       <div class="access-map reveal">
         <iframe src="https://www.google.com/maps/embed?pb=!1m3!3m2!1m1!4s2159648880478959422!3m1!1sja!5m1!1sja" title="井坂鍼灸整体院 の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
@@ -802,11 +804,11 @@ ul{margin:0;padding:0;list-style:none}
 <section class="cta" id="cta-final">
   <div class="cta-inner narrow">
     <span class="eyebrow">Reservation</span>
-    <h2>頑張ってきた身体に、<br>「いまだけの時間」を。</h2>
-    <p>完全予約制のため、お席に限りがございます。<br>ご予約・ご相談は、公式LINEまたは予約フォームよりお気軽にどうぞ。</p>
+    <h2>頑張ってきた<wbr>身体に、<br>「いまだけの<wbr><span class="nb">時間」を。</span></h2>
+    <p>完全予約制のため、<wbr>お席に<wbr>限りがございます。<br>ご予約・ご相談は、<wbr>公式LINEまたは<wbr>予約フォームよりお気軽にどうぞ。</p>
     <div class="cta-buttons">
-      <a class="btn btn-primary" href="https://lin.ee/wNxvZgxm" target="_blank" rel="noopener">公式LINEで予約・相談する</a>
-      <a class="btn btn-ghost" href="https://member.honey-style.com/search/78828" target="_blank" rel="noopener">予約フォームから予約する</a>
+      <a class="btn btn-primary" href="https://lin.ee/wNxvZgxm" target="_blank" rel="noopener">公式LINEで<wbr>予約・相談する</a>
+      <a class="btn btn-ghost" href="https://member.honey-style.com/search/78828" target="_blank" rel="noopener">予約フォームから<wbr>予約する</a>
     </div>
   </div>
 </section>
@@ -817,7 +819,7 @@ ul{margin:0;padding:0;list-style:none}
     <div class="footer-grid">
       <div>
         <img src="assets/logo-full.png?v=3" alt="井坂鍼灸整体院" width="118" style="display:block;background:#fffdf8;padding:14px 18px;border-radius:14px;margin-bottom:18px">
-        <p>頑張りすぎた身体に、本来のリズムを取り戻す。<br>身体と心、両方を整える隠れ家サロン。</p>
+        <p>頑張りすぎた<wbr>身体に、<wbr>本来の<wbr>リズムを<wbr>取り戻す。<br>身体と<wbr>心、<wbr>両方を<wbr>整える<wbr>隠れ家サロン。</p>
       </div>
       <div>
         <h5>Menu</h5>
@@ -842,13 +844,13 @@ ul{margin:0;padding:0;list-style:none}
       </div>
     </div>
     <div class="footer-bottom">
-      <div style="margin-bottom:12px"><a href="tokushoho.html">特定商取引法に基づく表記</a>　|　<a href="privacy.html">プライバシーポリシー</a></div>
+      <div style="margin-bottom:12px"><a href="tokushoho.html">特定商取引法に<wbr>基づく<wbr>表記</a>　|　<a href="privacy.html">プライバシーポリシー</a></div>
       © 井坂鍼灸整体院 ISAKA Acupuncture &amp; Seitai
     </div>
   </div>
 </footer>
 
-<a class="float-cta" href="https://lin.ee/wNxvZgxm" target="_blank" rel="noopener">公式LINEで予約・相談する　→</a>
+<a class="float-cta" href="https://lin.ee/wNxvZgxm" target="_blank" rel="noopener">公式LINEで<wbr>予約・相談する<wbr>　→</a>
 
 <script>
 // ハンバーガー
